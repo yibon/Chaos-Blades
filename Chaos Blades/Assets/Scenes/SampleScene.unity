@@ -251,6 +251,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1411908697}
   - component: {fileID: 1411908696}
+  - component: {fileID: 1411908699}
   - component: {fileID: 1411908695}
   - component: {fileID: 1411908698}
   m_Layer: 0
@@ -272,6 +273,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79d6859572410e24a92899e6fe01de1f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attackSpellCooldownList: []
+  proteccSpellCooldownList: []
   playerSpeed: 5
 --- !u!212 &1411908696
 SpriteRenderer:
@@ -361,3 +364,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1411908699
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1411908694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19942126d068c8743b222cd5ae01c229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
