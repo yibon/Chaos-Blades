@@ -36,6 +36,7 @@ public class SpellManager : MonoBehaviour
 
 }
 
+//Mainly used to compare original value and set the dynamic values for the spell used. rarely will use these numbers directly.
 public struct Spells
 {
     public float healthGain;
