@@ -53,6 +53,10 @@ public class PlayerMovement : MonoBehaviour
 
         direction = new Vector2(horizontalIP, verticalIP);
 
+        #region temp mana increase
+        if (Input.GetKeyDown(KeyCode.M)) { currMana = 10; Debug.Log(currMana); }
+        #endregion
+
         #region choosing spell
         if (Input.GetKeyDown(KeyCode.Q)) //attack
         {
@@ -110,7 +114,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void ChargeProteccSpell(int proteccIndex)
     {
-        if (SpellManager.instance.attackSpells[proteccIndex].manaCost <= currMana && proteccSpellCooldownList[proteccIndex] == 0) //checking spell CD
+        float ManaCost = SpellManager.instance.attackSpells[proteccIndex].manaCost;
+        if (ManaCost + 2 <= currMana && proteccSpellCooldownList[proteccIndex] == 0) //checking spell is castable
         {
             #region Checking Mouse press
             if (Input.GetMouseButton(1)) //healing with RMB
@@ -131,35 +136,49 @@ public class PlayerMovement : MonoBehaviour
                 {
                     Debug.Log(proteccIndex + "Meed");
                     proteccSpellCooldownList[proteccIndex] += 1;
+                    ManaCost += 1;
                 }
                 else // timer more than 2, beeg charge
                 {
                     Debug.Log(proteccIndex + "Beeg");
                     proteccSpellCooldownList[proteccIndex] += 2;
+                    ManaCost += 2;
                 }
                 spellChargeTimer = 0;
                 castingProtecc = false;
+                currMana -= ManaCost;
+                Debug.Log("Protect casted, left Mana: " + currMana);
                 
             }
             #endregion
         }
-        else
+        else if (proteccSpellCooldownList[proteccIndex] > 0) //if spell is casted
         {
-            if (proteccSpellCooldownList[proteccIndex] > 0)
-            {
-                proteccSpellCooldownList[proteccIndex] -= Time.deltaTime;
-            }
-            else
-            {
+            proteccSpellCooldownList[proteccIndex] -= Time.deltaTime;
+
+            if (proteccSpellCooldownList[proteccIndex]<=0)
                 proteccSpellCooldownList[proteccIndex] = 0;
+            
+            if (Input.GetMouseButtonDown(1))
+            {
+                //for now debug, later change this to visual prompt
+                Debug.Log(SpellManager.instance.attackSpells[proteccIndex].ToString() +" on CD, wait " + proteccSpellCooldownList[proteccIndex]);
             }
-            Debug.Log("on CD, wait " + proteccSpellCooldownList[proteccIndex]);
+        }
+        else if (ManaCost + 2 > currMana) //if mana not enough
+        {
+            if (Input.GetMouseButtonDown(1))
+            {
+                //for now debug, later change this to visual prompt
+                Debug.Log("No Mana!");
+            }
         }
     }
 
     public void ChargeAttaccSpell(int attackIndex)
     {
-        if (SpellManager.instance.attackSpells[attackIndex].manaCost <= currMana && attackSpellCooldownList[attackIndex] == 0) //checking spell CD
+        float ManaCost = SpellManager.instance.attackSpells[attackIndex].manaCost;
+        if (ManaCost + 2 <= currMana && attackSpellCooldownList[attackIndex] == 0) //checking spell CD
         {
             #region Checking Mouse pres
             if (Input.GetMouseButton(0)) //attacking with LMB
@@ -180,28 +199,42 @@ public class PlayerMovement : MonoBehaviour
                 {
                     Debug.Log(attackIndex + "Meed");
                     attackSpellCooldownList[attackIndex] += 1;
+                    ManaCost += 1;
                 }
                 else // timer more than 2, beeg charge
                 {
                     Debug.Log(attackIndex + "Beeg");
                     attackSpellCooldownList[attackIndex] += 2;
+                    ManaCost += 2;
                 }
                 spellChargeTimer = 0;
                 castingAttack = false;
+                currMana -= ManaCost;
+                Debug.Log("Attack casted, left Mana: " + currMana);
             }
             #endregion
         }
-        else
+        else if (attackSpellCooldownList[attackIndex]>0) //if spell is casted
         {
-            if (attackSpellCooldownList[attackIndex] > 0)
-            {
-                attackSpellCooldownList[attackIndex] -= Time.deltaTime;
-            }
-            else
-            {
+            attackSpellCooldownList[attackIndex] -= Time.deltaTime;
+
+            if (attackSpellCooldownList[attackIndex] <= 0)
                 attackSpellCooldownList[attackIndex] = 0;
+            
+            if (Input.GetMouseButton(0))
+            {
+                //for now debug, later change this to visual prompt
+                Debug.Log(SpellManager.instance.attackSpells[attackIndex].ToString() + " on CD, wait " + attackSpellCooldownList[attackIndex]);
             }
-            Debug.Log("on CD, wait " + attackSpellCooldownList[attackIndex]);
+            
+        }
+        else if (ManaCost + 2 > currMana) //if mana not enough
+        {
+            if (Input.GetMouseButtonDown(0))
+            {
+                //for now debug, later change this to visual prompt
+                Debug.Log("No Mana!");
+            }
         }
     }
 
