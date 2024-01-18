@@ -114,7 +114,7 @@ public class PlayerMovement : MonoBehaviour
 
     public void ChargeProteccSpell(int proteccIndex)
     {
-        float ManaCost = SpellManager.instance.attackSpells[proteccIndex].manaCost;
+        float ManaCost = SpellManager.instance.proteccSpells[proteccIndex].manaCost;
         if (ManaCost + 2 <= currMana && proteccSpellCooldownList[proteccIndex] == 0) //checking spell is castable
         {
             #region Checking Mouse press
@@ -130,24 +130,24 @@ public class PlayerMovement : MonoBehaviour
                 proteccSpellCooldownList[proteccIndex] = SpellManager.instance.proteccSpells[proteccIndex].cooldown;
                 if (spellChargeTimer >= 0 && spellChargeTimer <= 1) //if timer more than 0 and less than equal 1, basic (Smol) charge
                 {   
-                    Debug.Log(proteccIndex + "smol");
+                    Debug.Log("Smol " + SpellManager.instance.proteccSpells[proteccIndex].Name); //replace with instantiation code
                 }
                 else if (spellChargeTimer > 1 && spellChargeTimer <= 2) //if timer more than 1 and less than equal 2, med charge
                 {
-                    Debug.Log(proteccIndex + "Meed");
+                    Debug.Log("Med " + SpellManager.instance.proteccSpells[proteccIndex].Name); //replace with instantiation code
                     proteccSpellCooldownList[proteccIndex] += 1;
                     ManaCost += 1;
                 }
                 else // timer more than 2, beeg charge
                 {
-                    Debug.Log(proteccIndex + "Beeg");
+                    Debug.Log("Beeg " + SpellManager.instance.proteccSpells[proteccIndex].Name); //replace with instantiation code
                     proteccSpellCooldownList[proteccIndex] += 2;
                     ManaCost += 2;
                 }
                 spellChargeTimer = 0;
                 castingProtecc = false;
                 currMana -= ManaCost;
-                Debug.Log("Protect casted, left Mana: " + currMana);
+                Debug.Log(SpellManager.instance.proteccSpells[proteccIndex].Name + " casted, left Mana: " + currMana);
                 
             }
             #endregion
@@ -162,7 +162,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetMouseButtonDown(1))
             {
                 //for now debug, later change this to visual prompt
-                Debug.Log(SpellManager.instance.attackSpells[proteccIndex].ToString() +" on CD, wait " + proteccSpellCooldownList[proteccIndex]);
+                Debug.Log(SpellManager.instance.proteccSpells[proteccIndex].Name + " on CD, wait " + proteccSpellCooldownList[proteccIndex]);
             }
         }
         else if (ManaCost + 2 > currMana) //if mana not enough
@@ -193,24 +193,24 @@ public class PlayerMovement : MonoBehaviour
                 attackSpellCooldownList[attackIndex] = SpellManager.instance.attackSpells[attackIndex].cooldown;
                 if (spellChargeTimer >= 0 && spellChargeTimer < 1) //if timer more than 0 and less than equal 1, basic (Smol) charge
                 {
-                    Debug.Log(attackIndex + "smol");
+                    Debug.Log("Smol " + SpellManager.instance.attackSpells[attackIndex].Name); //replace with instantiation code
                 }
                 else if (spellChargeTimer >= 1 && spellChargeTimer < 2) //if timer more than 1 and less than equal 2, med charge
                 {
-                    Debug.Log(attackIndex + "Meed");
+                    Debug.Log("Med " + SpellManager.instance.attackSpells[attackIndex].Name); //replace with instantiation code
                     attackSpellCooldownList[attackIndex] += 1;
                     ManaCost += 1;
                 }
                 else // timer more than 2, beeg charge
                 {
-                    Debug.Log(attackIndex + "Beeg");
+                    Debug.Log("Beeg " + SpellManager.instance.attackSpells[attackIndex].Name); //replace with instantiation code
                     attackSpellCooldownList[attackIndex] += 2;
                     ManaCost += 2;
                 }
                 spellChargeTimer = 0;
                 castingAttack = false;
                 currMana -= ManaCost;
-                Debug.Log("Attack casted, left Mana: " + currMana);
+                Debug.Log(SpellManager.instance.attackSpells[attackIndex].Name + " casted, left Mana: " + currMana);
             }
             #endregion
         }
@@ -224,7 +224,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetMouseButton(0))
             {
                 //for now debug, later change this to visual prompt
-                Debug.Log(SpellManager.instance.attackSpells[attackIndex].ToString() + " on CD, wait " + attackSpellCooldownList[attackIndex]);
+                Debug.Log(SpellManager.instance.attackSpells[attackIndex].Name + " on CD, wait " + attackSpellCooldownList[attackIndex]);
             }
             
         }

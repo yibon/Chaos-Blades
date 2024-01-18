@@ -22,10 +22,10 @@ public class SpellManager : MonoBehaviour
         }
 
         #region Creating Spells and Adding to list
-        Spells healing = new Spells(5, 0, 0, 1, 1, 1, 5, "string");
-        Spells proteccTheAttacc = new Spells(0, 5, 0, 1, 1, 2, 5, "string");
-        Spells smolPewPew = new Spells(0, 0, 5, 1, 1, 1, 5, "string");
-        Spells beegBoomBoom = new Spells(0, 0, 5, 1, 1, 1, 5, "string");
+        Spells healing = new Spells("Helt", 5, 0, 0, 1, 1, 1, 5, "string");
+        Spells proteccTheAttacc = new Spells("Protecc the Attacc" ,0, 5, 0, 1, 1, 2, 5, "string");
+        Spells smolPewPew = new Spells("Smol Pew Pew" ,0, 0, 5, 1, 1, 1, 5, "string");
+        Spells beegBoomBoom = new Spells("Beeg Boom Boom", 0, 0, 5, 1, 1, 1, 5, "string");
 
         attackSpells.Add(smolPewPew);
         attackSpells.Add(beegBoomBoom);
@@ -36,9 +36,10 @@ public class SpellManager : MonoBehaviour
 
 }
 
-//Mainly used to compare original value and set the dynamic values for the spell used. rarely will use these numbers directly.
+//Mainly used to compare original value and set the dynamic values for the spell used. rarely will use these numbers directly. 
 public struct Spells
 {
+    public string Name;
     public float healthGain;
     public float damageReduce;
     public float damageDealt;
@@ -48,8 +49,9 @@ public struct Spells
     public float cooldown;
     public string flavourText;
 
-    public Spells(float healthGain, float damageReduce, float damageDealt, float radius, float fireRate, float manaCost, float cooldown, string flavourText)
+    public Spells(string Name, float healthGain, float damageReduce, float damageDealt, float radius, float fireRate, float manaCost, float cooldown, string flavourText)
     {
+        this.Name = Name;
         this.healthGain = healthGain;
         this.damageReduce = damageReduce;
         this.damageDealt = damageDealt;
