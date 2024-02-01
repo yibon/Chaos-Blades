@@ -1,0 +1,839 @@
+fileFormatVersion: 2
+guid: bcb1ce1182004c64fb72a913564ad6a1
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: King Anim Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3531
+        width: 432
+        height: 465
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90143ee78d81c1c4d9dda6f299624c21
+      internalID: -669812003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 3518
+        width: 432
+        height: 478
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 975b46cfa0012ea428fdca8efc754ab3
+      internalID: 582108962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1287
+        y: 3513
+        width: 432
+        height: 483
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2c016e256ae73d478296471ee8723ac
+      internalID: 1553044113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1872
+        y: 3514
+        width: 432
+        height: 482
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06df4e122296bf849b4703c639bc085f
+      internalID: -1690380780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 2520
+        y: 3531
+        width: 432
+        height: 465
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4af3ae13a38d6e649b8efbca67eaca23
+      internalID: -1018634859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 3236
+        y: 3518
+        width: 432
+        height: 478
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5545b6eb2a2766a419590111474bd2e1
+      internalID: -814807686
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2938
+        width: 432
+        height: 483
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 187450f17d1b0b24f9049baa39fd5661
+      internalID: 1939487034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 2939
+        width: 432
+        height: 482
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71ffdadd999b69048a6c393b1848631f
+      internalID: 1473984059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 1249
+        y: 2957
+        width: 509
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07cfe1e15edd5b44386f434b66b47406
+      internalID: -1536497844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 1871
+        y: 2943
+        width: 435
+        height: 478
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d65523160fdc50647a70ba2880441ffd
+      internalID: -113258606
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 2573
+        y: 2938
+        width: 325
+        height: 483
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b51a985cf6ed79446b2f00885a83d23a
+      internalID: 686463211
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 3297
+        y: 2939
+        width: 312
+        height: 482
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a441b61c5b741247aadf7212933217f
+      internalID: 78182747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2333
+        width: 399
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c42ecf0c1f6be9419e563263573bb46
+      internalID: 834393105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 2319
+        width: 392
+        height: 478
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5a47e69fc7535640b36c852c96af2e0
+      internalID: -331119715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 2314
+        width: 392
+        height: 483
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b85fe9da67a948a42a0f8b9fe7462107
+      internalID: -1365305051
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 2315
+        width: 392
+        height: 482
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe0efc6c6c35ce499e1ede42e19e683
+      internalID: 1327259498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 2540
+        y: 2333
+        width: 392
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b950e9b2a3760d64fa6441304daf1a7d
+      internalID: -1215636638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 3256
+        y: 2319
+        width: 392
+        height: 478
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cad943aeecfc943499dea2a9593e83a8
+      internalID: 1061359138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1730
+        width: 392
+        height: 483
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e657ce1906be1d240813b9bff51765b1
+      internalID: -1611135815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 1749
+        width: 392
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b1b6902b019e64ba47a53c0ce66a84
+      internalID: 1402794505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 1307
+        y: 1731
+        width: 392
+        height: 482
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96819f90faad2a6439a1e65b93e8cbbc
+      internalID: -724731244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 1892
+        y: 1735
+        width: 392
+        height: 478
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ccedfcbd1df282478e965c7a7d15d14
+      internalID: -261886628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 2540
+        y: 1730
+        width: 392
+        height: 483
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcd6b343384d38e4a9d093383bfd7df4
+      internalID: -1117099459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 3256
+        y: 1731
+        width: 392
+        height: 482
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 188bcb556e0365845b0d25b82b1599e1
+      internalID: 34217888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1174
+        width: 392
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9003439e1c811544bac921dd1b145cca
+      internalID: -744005134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 1167
+        width: 399
+        height: 478
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1731d93f6ba51b428072bbdbeb337a6
+      internalID: -686750585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 1323
+        y: 1165
+        width: 360
+        height: 483
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6c6ad6573aa75740980b20f62291ee8
+      internalID: -910306059
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 1937
+        y: 1165
+        width: 302
+        height: 482
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eb7609bad89960459c41ec6366a1b2a
+      internalID: -2123707504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 2544
+        y: 1174
+        width: 385
+        height: 464
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68f5b0a460a081b468c6bb6c73c999c0
+      internalID: 911780833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 3198
+        y: 1167
+        width: 509
+        height: 478
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b7d6de89aef625479f075ba350efc4e
+      internalID: 1506031161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 614
+        width: 432
+        height: 483
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e068f51db67dc840a20e43053adf329
+      internalID: 1953297502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: King Anim Spritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 614
+        width: 432
+        height: 482
+      alignment: 9
+      pivot: {x: 0.5, y: 0.05}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a302ae32c20a66409bc6523358913ec
+      internalID: -701937980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      King Anim Spritesheet_7: 1473984059
+      King Anim Spritesheet_9: -113258606
+      King Anim Spritesheet_10: 686463211
+      King Anim Spritesheet_25: -686750585
+      King Anim Spritesheet_28: 911780833
+      King Anim Spritesheet_5: -814807686
+      King Anim Spritesheet_6: 1939487034
+      King Anim Spritesheet_21: -261886628
+      King Anim Spritesheet_22: -1117099459
+      King Anim Spritesheet_12: 834393105
+      King Anim Spritesheet_23: 34217888
+      King Anim Spritesheet_11: 78182747
+      King Anim Spritesheet_27: -2123707504
+      King Anim Spritesheet_31: -701937980
+      King Anim Spritesheet_0: -669812003
+      King Anim Spritesheet_14: -1365305051
+      King Anim Spritesheet_2: 1553044113
+      King Anim Spritesheet_26: -910306059
+      King Anim Spritesheet_30: 1953297502
+      King Anim Spritesheet_15: 1327259498
+      King Anim Spritesheet_24: -744005134
+      King Anim Spritesheet_4: -1018634859
+      King Anim Spritesheet_19: 1402794505
+      King Anim Spritesheet_18: -1611135815
+      King Anim Spritesheet_8: -1536497844
+      King Anim Spritesheet_29: 1506031161
+      King Anim Spritesheet_13: -331119715
+      King Anim Spritesheet_20: -724731244
+      King Anim Spritesheet_16: -1215636638
+      King Anim Spritesheet_17: 1061359138
+      King Anim Spritesheet_3: -1690380780
+      King Anim Spritesheet_1: 582108962
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
