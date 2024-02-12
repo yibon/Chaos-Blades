@@ -5,10 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - King
-  - Enemy Melee
-  - Enemy Ranged
-  - Enemy Tank
   - Enemy Support
+  - Enemy
   layers:
   - Default
   - TransparentFX
