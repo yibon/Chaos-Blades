@@ -28,8 +28,7 @@ public class KingAI : MonoBehaviour
         //replace the obj searching with a list that is genereated from spawner.cs
         if (GameObject.FindGameObjectWithTag("Enemy") == true)
         {
-            Vector3 forceApplied = GameObject.FindGameObjectWithTag("Enemy").transform.position - this.transform.position; //EnemyAI.instance.nonSupportEnemies[EnemyAI.instance.nonSupportEnemies.Length - 1].transform.position - this.transform.position;
-            forceApplied = forceApplied.normalized;
+            Vector3 forceApplied = GameObject.FindGameObjectWithTag("Enemy").transform.position - this.transform.position;
             forceApplied = forceApplied * 1f;
             rb2D.AddForce(forceApplied);
         }
