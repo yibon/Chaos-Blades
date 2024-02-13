@@ -21,16 +21,27 @@ public class PlayerMovement : MonoBehaviour
     bool castingAttack = false;
     bool castingProtecc = false;
 
+    float moveSpeed = 5f;
+
     public float playerSpeed;
 
     Vector2 direction;
 
     Rigidbody2D rb;
 
+    // 0 - small pew, 1- big boom
     int attackSpellIndex = 0;
+    // o - helf, 1- protecc
     int protectionSpellIndex = 0;
 
     float spellChargeTimer = 0;
+
+    [Header("SHOOTING")] 
+    // Singleton this? 
+    public Transform firePoint;
+    public GameObject bulletPF;
+
+    public float bulletForce = 20f;
     private void Awake()
     {
         attackSpellCooldownList.Add(attackSpell1CD);
@@ -41,7 +52,6 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        
 
     }
 
@@ -109,7 +119,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
-        this.rb.AddForce(direction.normalized * playerSpeed);
+        rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
     }
 
     public void ChargeProteccSpell(int proteccIndex)
@@ -129,17 +139,20 @@ public class PlayerMovement : MonoBehaviour
                 //setting CD
                 proteccSpellCooldownList[proteccIndex] = SpellManager.instance.proteccSpells[proteccIndex].cooldown;
                 if (spellChargeTimer >= 0 && spellChargeTimer <= 1) //if timer more than 0 and less than equal 1, basic (Smol) charge
-                {   
+                {
+                    Shoot(1, proteccIndex);
                     Debug.Log("Smol " + SpellManager.instance.proteccSpells[proteccIndex].Name); //replace with instantiation code
                 }
                 else if (spellChargeTimer > 1 && spellChargeTimer <= 2) //if timer more than 1 and less than equal 2, med charge
                 {
+                    Shoot(1, proteccIndex);
                     Debug.Log("Med " + SpellManager.instance.proteccSpells[proteccIndex].Name); //replace with instantiation code
                     proteccSpellCooldownList[proteccIndex] += 1;
                     ManaCost += 1;
                 }
                 else // timer more than 2, beeg charge
                 {
+                    Shoot(1, proteccIndex);
                     Debug.Log("Beeg " + SpellManager.instance.proteccSpells[proteccIndex].Name); //replace with instantiation code
                     proteccSpellCooldownList[proteccIndex] += 2;
                     ManaCost += 2;
@@ -191,19 +204,29 @@ public class PlayerMovement : MonoBehaviour
             {
                 //setting cooldown
                 attackSpellCooldownList[attackIndex] = SpellManager.instance.attackSpells[attackIndex].cooldown;
-                if (spellChargeTimer >= 0 && spellChargeTimer < 1) //if timer more than 0 and less than equal 1, basic (Smol) charge
+                
+                //if timer more than 0 and less than equal 1, basic (Smol) charge
+                if (spellChargeTimer >= 0 && spellChargeTimer < 1) 
                 {
-                    Debug.Log("Smol " + SpellManager.instance.attackSpells[attackIndex].Name); //replace with instantiation code
+                    //replace with instantiation code
+                    Shoot(0, attackIndex);
+                    Debug.Log("Smol " + SpellManager.instance.attackSpells[attackIndex].Name); 
                 }
-                else if (spellChargeTimer >= 1 && spellChargeTimer < 2) //if timer more than 1 and less than equal 2, med charge
+                
+                //if timer more than 1 and less than equal 2, med charge
+                else if (spellChargeTimer >= 1 && spellChargeTimer < 2) 
                 {
-                    Debug.Log("Med " + SpellManager.instance.attackSpells[attackIndex].Name); //replace with instantiation code
+                    //replace with instantiation code
+                    Debug.Log("Med " + SpellManager.instance.attackSpells[attackIndex].Name);
+                    Shoot(0, attackIndex);
                     attackSpellCooldownList[attackIndex] += 1;
                     ManaCost += 1;
                 }
                 else // timer more than 2, beeg charge
                 {
-                    Debug.Log("Beeg " + SpellManager.instance.attackSpells[attackIndex].Name); //replace with instantiation code
+                    //replace with instantiation code
+                    Debug.Log("Beeg " + SpellManager.instance.attackSpells[attackIndex].Name);
+                    Shoot(0, attackIndex);
                     attackSpellCooldownList[attackIndex] += 2;
                     ManaCost += 2;
                 }
@@ -214,6 +237,7 @@ public class PlayerMovement : MonoBehaviour
             }
             #endregion
         }
+
         else if (attackSpellCooldownList[attackIndex]>0) //if spell is casted
         {
             attackSpellCooldownList[attackIndex] -= Time.deltaTime;
@@ -238,5 +262,42 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-   
+    // SHOOTING 
+    //               0- attack, 1- defence
+    public void Shoot(int attOrDef, int spellIndex)
+    {
+        GameObject bullet = Instantiate(bulletPF, firePoint.position, firePoint.rotation);
+
+        Rigidbody2D bullet_rb = bullet.GetComponent<Rigidbody2D>();
+        bullet_rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+        
+        Boolet _boolet = bullet.GetComponent<Boolet>();
+
+        switch (attOrDef)
+        {
+            case 0:
+                switch (spellIndex)
+                {
+                    case 0:
+                        _boolet.currSpell = 0;
+                        break;
+                    case 1:
+                        _boolet.currSpell = 1;
+                        break;
+                }
+                break;
+
+            case 1:
+                switch (spellIndex)
+                {
+                    case 0:
+                        _boolet.currSpell = 3;
+                        break;
+                    case 1:
+                        _boolet.currSpell = 4;
+                        break;
+                }
+                break;
+        }
+    }
 }

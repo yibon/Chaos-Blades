@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5250602284631087550}
   m_Layer: 0
   m_Name: EnemySupport Sprite
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -208,3 +208,4 @@ MonoBehaviour:
   scoreAwardedOnDeath: 1
   force: 0
   rb2D: {fileID: 5250602285302975545}
+  nonSupportEnemies: []

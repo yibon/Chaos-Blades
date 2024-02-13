@@ -1,7 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
@@ -32,7 +28,7 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
         nonSupportEnemies = GameObject.FindGameObjectsWithTag("Enemy"); //constantly updating list
-        Debug.Log(nonSupportEnemies.Length);
+        //Debug.Log(nonSupportEnemies.Length);
         //look for tag based on enemy type
         if (name != "Support") // enemy type is not support 
         {
@@ -73,6 +69,8 @@ public class EnemyAI : MonoBehaviour
             
         }
 
+        Ded();
+
     }
 
     void Run(GameObject go) //function used when not in range
@@ -92,5 +90,14 @@ public class EnemyAI : MonoBehaviour
     void SupportBuff() //special class used for support enemy
     {
 
+    }
+
+    void Ded()
+    {
+        if (this.hp < 0)
+        {
+            // replace this with death animation
+            Destroy(this.gameObject);
+        }
     }
 }
