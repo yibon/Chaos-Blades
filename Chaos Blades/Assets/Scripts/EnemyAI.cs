@@ -7,9 +7,9 @@ using UnityEngine;
 public class EnemyAI : MonoBehaviour
 {
     [SerializeField] string name;
-    [SerializeField] float hp;
+    [SerializeField] public float hp;
     [SerializeField] float speed;
-    [SerializeField] float attack;
+    [SerializeField] public float attack;
     [SerializeField] float attackSpeed;
     [SerializeField] float range;
     [SerializeField] int scoreAwardedOnDeath;
@@ -20,13 +20,12 @@ public class EnemyAI : MonoBehaviour
 
 
     GameObject king;
-    GameObject[] nonSupportEnemies;
+    public GameObject[] nonSupportEnemies;
 
     // Start is called before the first frame update
     void Start()
     {
         king = GameObject.FindWithTag("King");
-        
     }
 
     // Update is called once per frame
