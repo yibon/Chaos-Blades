@@ -101,7 +101,7 @@ public class EnemyAI : MonoBehaviour
     void Attack() //used when in range of king
     {
         king.GetComponentInChildren<KingAI>().hp -= attack;
-        Debug.Log("king ouch");
+        //Debug.Log("king ouch");
     }
 
     void SupportBuff() //special class used for support enemy
@@ -123,9 +123,9 @@ public class EnemyAI : MonoBehaviour
         if (collision.gameObject.CompareTag("King"))
         {
             Attack();
-            Debug.Log("cooling down");
+            //Debug.Log("cooling down");
             StartCoroutine(Cooldowntimer(attackSpeed));
-            Debug.Log("ready");
+            //Debug.Log("ready");
         }
         
     }

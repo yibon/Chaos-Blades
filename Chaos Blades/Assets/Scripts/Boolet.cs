@@ -15,7 +15,7 @@ public class Boolet : MonoBehaviour
 
     void Start()
     {
-        //Debug.Log("kaboomz" + currSpell);
+        Debug.Log("bullet kaboomz" + currSpell);
         switch (currSpell)
         {
             // smoll pew pew
@@ -41,6 +41,7 @@ public class Boolet : MonoBehaviour
                 bulletAmt = SpellManager.instance.proteccSpells[1].damageReduce;
                 break;
         }
+        Debug.Log("i need more bulletsssssss" + healthMultiplier);
     }
 
 
@@ -53,6 +54,7 @@ public class Boolet : MonoBehaviour
             EnemyAI _enemy = collision.gameObject.GetComponentInParent<EnemyAI>();
             _enemy.hp = _enemy.hp + (healthMultiplier * bulletAmt);
             Debug.Log("Enemy Helf: " + _enemy.hp);
+            Destroy(this.gameObject);
         }
     }
 }

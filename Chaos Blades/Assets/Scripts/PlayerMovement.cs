@@ -291,10 +291,10 @@ public class PlayerMovement : MonoBehaviour
                 switch (spellIndex)
                 {
                     case 0:
-                        _boolet.currSpell = 3;
+                        _boolet.currSpell = 2;
                         break;
                     case 1:
-                        _boolet.currSpell = 4;
+                        _boolet.currSpell = 3;
                         break;
                 }
                 break;

@@ -59,7 +59,7 @@ public class KingAI : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag ("Enemy Support"))
         {
             EnemyAI.FindObjectOfType<EnemyAI>().hp -= attack;
-            Debug.Log("ouch");
+            //Debug.Log("ouch");
         }
         
     }
