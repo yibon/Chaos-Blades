@@ -1,3 +1,8 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class EnemyAI : MonoBehaviour
@@ -14,6 +19,10 @@ public class EnemyAI : MonoBehaviour
 
     public Rigidbody2D rb2D;
 
+    public Collider2D c2D;
+
+    public bool isHit = false;
+
 
     GameObject king;
     public GameObject[] nonSupportEnemies;
@@ -22,11 +31,18 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         king = GameObject.FindWithTag("King");
+        c2D = this.GetComponentInChildren<Collider2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        //destory if ded
+        if (hp <= 0)
+        {
+            Destroy(this.gameObject); 
+        }
+
         nonSupportEnemies = GameObject.FindGameObjectsWithTag("Enemy"); //constantly updating list
         //Debug.Log(nonSupportEnemies.Length);
         //look for tag based on enemy type
@@ -35,11 +51,11 @@ public class EnemyAI : MonoBehaviour
             //checking distance from king and enemy by minusing the game object current pos and king current pos
             if ((this.gameObject.transform.position - king.transform.position).magnitude > range) // not in range
             {
-                Run(king); 
+                Run(king);
             }
             else //in range
             {
-                Attack();
+
             }
         }
         else //enemy type is support
@@ -84,7 +100,8 @@ public class EnemyAI : MonoBehaviour
 
     void Attack() //used when in range of king
     {
-
+        king.GetComponentInChildren<KingAI>().hp -= attack;
+        Debug.Log("king ouch");
     }
 
     void SupportBuff() //special class used for support enemy
@@ -99,5 +116,22 @@ public class EnemyAI : MonoBehaviour
             // replace this with death animation
             Destroy(this.gameObject);
         }
+    }
+    
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("King"))
+        {
+            Attack();
+            Debug.Log("cooling down");
+            StartCoroutine(Cooldowntimer(attackSpeed));
+            Debug.Log("ready");
+        }
+        
+    }
+
+    IEnumerator Cooldowntimer(float time)
+    {
+        yield return new WaitForSeconds(time);
     }
 }

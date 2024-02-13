@@ -11,13 +11,12 @@ public class KingAI : MonoBehaviour
     [SerializeField] float attackSpeed;
     [SerializeField] float range;
 
-    EnemyAI enemyAI;
-    Rigidbody2D rb2D;
+    public Rigidbody2D rb2D;
+    public Collider2D attackCollider2D;
     
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -27,29 +26,41 @@ public class KingAI : MonoBehaviour
 
         //constantly looking for enemy
         //replace the obj searching with a list that is genereated from spawner.cs
-        if (enemyAI.nonSupportEnemies.Length > 0)
+        if (GameObject.FindGameObjectWithTag("Enemy") == true)
         {
-            Vector3 forceApplied = enemyAI.nonSupportEnemies[enemyAI.nonSupportEnemies.Length - 1].transform.position - this.transform.position;
+            Vector3 forceApplied = GameObject.FindGameObjectWithTag("Enemy").transform.position - this.transform.position; //EnemyAI.instance.nonSupportEnemies[EnemyAI.instance.nonSupportEnemies.Length - 1].transform.position - this.transform.position;
+            forceApplied = forceApplied.normalized;
+            forceApplied = forceApplied * 1f;
+            rb2D.AddForce(forceApplied);
+        }
+        else if (GameObject.FindGameObjectWithTag("Enemy Support") == true)
+        {
+            GameObject enemySupport = GameObject.FindWithTag("Enemy Support");
+            Vector3 forceApplied = enemySupport.transform.position - this.transform.position;
             forceApplied = forceApplied.normalized;
             forceApplied = forceApplied * 1f;
             rb2D.AddForce(forceApplied);
         }
         else
         {
-            GameObject enemySupport = GameObject.FindWithTag("EnemySupport");
-            Vector3 forceApplied = enemySupport.transform.position - this.transform.position;
-            forceApplied = forceApplied.normalized;
-            forceApplied = forceApplied * 1f;
-            rb2D.AddForce(forceApplied);
+            return;
+        }
+
+        if (hp <= 0)
+        {
+            Destroy(this.gameObject);
+            // put in the game over screen here
+            // can start the calculations for score now
         }
     }
 
-   /* private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.GetComponent<EnemyAI>() != null)
+        if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag ("Enemy Support"))
         {
-            enemyAI = collision.GetComponent<EnemyAI>();
-            enemyAI.hp -= attack;
+            EnemyAI.FindObjectOfType<EnemyAI>().hp -= attack;
+            Debug.Log("ouch");
         }
-    }*/
+        
+    }
 }
