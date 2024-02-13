@@ -76,6 +76,7 @@ MonoBehaviour:
   scoreAwardedOnDeath: 2
   force: 0
   rb2D: {fileID: 8309703424359002405}
+  nonSupportEnemies: []
 --- !u!1 &8309703424735958639
 GameObject:
   m_ObjectHideFlags: 0

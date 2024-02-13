@@ -208,3 +208,4 @@ MonoBehaviour:
   scoreAwardedOnDeath: 1
   force: 0
   rb2D: {fileID: 5250602285302975545}
+  nonSupportEnemies: []
