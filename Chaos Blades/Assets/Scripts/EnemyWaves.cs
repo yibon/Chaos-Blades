@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
 using UnityEngine;
 
 public class EnemyWaves : MonoBehaviour
@@ -14,6 +15,15 @@ public class EnemyWaves : MonoBehaviour
     int currRanged;
     int currSupport;
     int currTank;
+    int totalEnemiesSpawn;
+
+    [SerializeField] Transform[] spawnPoints = new Transform[6];
+    [SerializeField] GameObject[] enemyPF = new GameObject[4];
+
+    float waveTimer;
+    float enemyTimer;
+
+    bool enemySpawning;
 
     // Start is called before the first frame update
     void Start()
@@ -61,66 +71,124 @@ public class EnemyWaves : MonoBehaviour
         WavesList.Add(e14);
         WavesList.Add(e15);
         #endregion
-        currWaveIndex = 0;
+        
+        currWaveIndex = 0; 
+        Spawning(currWaveIndex);
+
+        enemySpawning = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        waveTimer += Time.deltaTime;
+        enemyTimer += Time.deltaTime;
+
+        // When wave timer goes off,
+        if (waveTimer > WavesList[currWaveIndex].waveSpawnInterval)
+        {
+            // current wave index increases
+            ++currWaveIndex;
+            Debug.Log("Wave Timer ran out: " + waveTimer + " || Current Wave is: " + currWaveIndex);
+            waveTimer = 0;
+            enemyTimer = 0;
+            totalEnemiesSpawn = 0;
+        }
+
+        // When enemy timer goes off,
+        if (enemyTimer > WavesList[currWaveIndex].enemySpawnInterval)
+        {
+            Debug.Log("Enemy Timer ran out: " + enemyTimer);
+            // Spawns enemy
+            enemySpawning = true;
+            // Resets
+            enemyTimer = 0;
+        }
+
+        if (enemySpawning)
+        {
+            //Debug.Log("Spawning!");
+            // Re-rolling the odds untill an enemy is spawned
+            if(Spawning(currWaveIndex))
+            {
+                // Spawn once
+                enemySpawning = false;
+            }
+        }
     }
 
-    void Spawning()
+    bool Spawning(int waveIndex)
     {
-        float timer = 0;
-        timer += Time.deltaTime;
+        eWaves currWave = WavesList[waveIndex];
 
-        eWaves currWave = WavesList[currWaveIndex];
         currMelee = currWave.numMelee;
         currRanged = currWave.numRanged;
         currSupport = currWave.numSupport;
         currTank = currWave.numTank;
 
-        int totalEnemiesSpawn = 0;
         int randomEnemy = Random.Range(0, 4);
-
+        // Checking Spawn Interval
+        // If there are more enemies more to spawn
         if (totalEnemiesSpawn < currWave.maxEnemies)
         {
+            Debug.Log("Checking for Enemies");
+            // Rolling enemy
             switch (randomEnemy)
             {
                 // Rolled Melee
                 case 0:
+                    Debug.Log("Rolled Melee");
+                    // Checking if there are anymore melee to spawn
                     if (currMelee > 0)
                     {
+                        Debug.Log("Spawned Melee");
+                        Instantiate(enemyPF[0], GetRandomPosition(), Quaternion.identity);
                         --currMelee;
+                        ++totalEnemiesSpawn;
+                        return true;
                     }
-                    return;
+                    return false;
                 // Rolled Ranged
                 case 1:
+                    Debug.Log("Rolled Ranged");
                     if (currRanged > 0)
                     {
+                        Debug.Log("Spawned Ranged");
+                        Instantiate(enemyPF[1], GetRandomPosition(), Quaternion.identity);
                         --currRanged;
+                        ++totalEnemiesSpawn;
+                        return true;
                     }
-                    return;
-
+                    return false;
                 // Rolled Support
                 case 2:
+                    Debug.Log("Rolled Support");
                     if (currSupport > 0)
                     {
+                        Debug.Log("Spawned Support");
+                        Instantiate(enemyPF[2], GetRandomPosition(), Quaternion.identity);
                         --currSupport;
+                        ++totalEnemiesSpawn;
+                        return true;
                     }
-                    return;
-
+                    return false;
                 // Rolled Tank
                 case 3:
+                    Debug.Log("Rolled Tank");
                     if (currTank > 0)
                     {
+                        Debug.Log("Spawned Tank");
+                        Instantiate(enemyPF[3], GetRandomPosition(), Quaternion.identity);
                         --currTank;
+                        ++totalEnemiesSpawn;
+                        return true;
                     }
-                    return;
+                    return false;
+                default: 
+                    return false;
             }
         }
-
+        return false;
     }
 
     public struct eWaves
@@ -147,6 +215,29 @@ public class EnemyWaves : MonoBehaviour
             this.enemySpawnInterval = _enemySpawnInterval;
             this.waveSpawnInterval = _waveSpawnInterval;
             this.maxEnemies = _maxEnemies;
+        }
+    }
+
+    Vector2 GetRandomPosition()
+    {
+        int randomPos = Random.Range(0, 6);
+        switch (randomPos)
+        {
+            case 0:
+                return spawnPoints[0].position;
+            case 1:
+                return spawnPoints[1].position;
+            case 2:
+                return spawnPoints[2].position;
+            case 3:
+                return spawnPoints[3].position;
+            case 4:
+                return spawnPoints[4].position;
+            case 5:
+                return spawnPoints[5].position;
+
+            default:
+                return Vector2.zero;
         }
     }
 }
