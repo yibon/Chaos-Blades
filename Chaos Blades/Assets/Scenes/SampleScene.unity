@@ -873,6 +873,50 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnemyMelee
       objectReference: {fileID: 0}
+    - target: {fileID: 4775961726722414361, guid: 4cf127a8addabd64db9334e691e989f1, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 1410599846, guid: 5b5e5f4aa770f4b43848322361d3e35a, type: 3}
+    - target: {fileID: 4775961726722414361, guid: 4cf127a8addabd64db9334e691e989f1, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775961726722414361, guid: 4cf127a8addabd64db9334e691e989f1, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775961726722414361, guid: 4cf127a8addabd64db9334e691e989f1, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775961726722414367, guid: 4cf127a8addabd64db9334e691e989f1, type: 3}
+      propertyPath: m_Size.x
+      value: 1.9199133
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775961726722414367, guid: 4cf127a8addabd64db9334e691e989f1, type: 3}
+      propertyPath: m_Size.y
+      value: 1.6570816
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775961726722414367, guid: 4cf127a8addabd64db9334e691e989f1, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0073008537
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775961726722414367, guid: 4cf127a8addabd64db9334e691e989f1, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.019076347
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775961726722414367, guid: 4cf127a8addabd64db9334e691e989f1, type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775961726722414367, guid: 4cf127a8addabd64db9334e691e989f1, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 1.9700001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4775961726722414367, guid: 4cf127a8addabd64db9334e691e989f1, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.6700001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cf127a8addabd64db9334e691e989f1, type: 3}
 --- !u!1001 &5250602285947859484
