@@ -11,7 +11,7 @@ public class PlayerMovement : MonoBehaviour
     float verticalIP;
 
     //Player Stats
-    float currMana = 10;
+    public float currMana = 10;
     public List<float> attackSpellCooldownList = new List<float>();
     public List<float> proteccSpellCooldownList = new List<float>();
     float attackSpell1CD = 0;
@@ -30,9 +30,9 @@ public class PlayerMovement : MonoBehaviour
     Rigidbody2D rb;
 
     // 0 - small pew, 1- big boom
-    int attackSpellIndex = 0;
+    public int attackSpellIndex = 0;
     // o - helf, 1- protecc
-    int protectionSpellIndex = 0;
+    public int protectionSpellIndex = 0;
 
     float spellChargeTimer = 0;
 
