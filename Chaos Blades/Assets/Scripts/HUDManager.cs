@@ -9,6 +9,9 @@ public class HUDManager : MonoBehaviour
     [SerializeField] TMP_Text kinghp_text;
     [SerializeField] TMP_Text playerMana_text;
 
+    [SerializeField] TMP_Text attackCD_text;
+    [SerializeField] TMP_Text defCD_text;
+
     [SerializeField] Sprite pewPewCard;
     [SerializeField] Sprite boomBoomCard;
     [SerializeField] Sprite helfCard;
@@ -24,6 +27,9 @@ public class HUDManager : MonoBehaviour
     {
         kinghp_text.text = "King's HP: " + _king.hp;
         playerMana_text.text = "Player's Mana: " + _player.currMana;
+
+        attackCD_text.text = "Attack CD: " + (int)(_player.attackSpellCooldownList[_player.attackSpellIndex]);
+        defCD_text.text = "Defence CD: " + (int)(_player.proteccSpellCooldownList[_player.protectionSpellIndex]);
 
         switch (_player.attackSpellIndex)
         {

@@ -186,7 +186,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &5250602285947859486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -208,4 +208,6 @@ MonoBehaviour:
   scoreAwardedOnDeath: 1
   force: 0
   rb2D: {fileID: 5250602285302975545}
+  c2D: {fileID: 0}
+  isHit: 0
   nonSupportEnemies: []

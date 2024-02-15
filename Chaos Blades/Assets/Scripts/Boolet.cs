@@ -56,5 +56,13 @@ public class Boolet : MonoBehaviour
             Debug.Log("Enemy Helf: " + _enemy.hp);
             Destroy(this.gameObject);
         }
+
+        if (collision.gameObject.CompareTag("King"))
+        {
+            KingAI _king = collision.gameObject.GetComponentInParent<KingAI>();
+            _king.hp = _king.hp + (healthMultiplier * bulletAmt);
+            Debug.Log("Enemy Helf: " + _king.hp);
+            Destroy(this.gameObject);
+        }
     }
 }
