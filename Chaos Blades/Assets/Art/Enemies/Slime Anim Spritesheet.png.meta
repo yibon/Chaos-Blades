@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -101,18 +101,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -120,10 +108,10 @@ TextureImporter:
       name: Slime Anim Spritesheet_0
       rect:
         serializedVersion: 2
-        x: 1124
-        y: 3478
-        width: 153
-        height: 216
+        x: 714
+        y: 3249
+        width: 152
+        height: 287
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +129,10 @@ TextureImporter:
       name: Slime Anim Spritesheet_1
       rect:
         serializedVersion: 2
-        x: 1920
-        y: 3568
-        width: 158
-        height: 200
+        x: 1050
+        y: 3411
+        width: 160
+        height: 199
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,9 +150,9 @@ TextureImporter:
       name: Slime Anim Spritesheet_2
       rect:
         serializedVersion: 2
-        x: 2707
-        y: 3634
-        width: 191
+        x: 1384
+        y: 3474
+        width: 193
         height: 177
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -183,10 +171,10 @@ TextureImporter:
       name: Slime Anim Spritesheet_3
       rect:
         serializedVersion: 2
-        x: 3522
-        y: 3568
+        x: 1751
+        y: 3409
         width: 158
-        height: 200
+        height: 199
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -204,10 +192,10 @@ TextureImporter:
       name: Slime Anim Spritesheet_4
       rect:
         serializedVersion: 2
-        x: 4323
-        y: 3478
-        width: 153
-        height: 216
+        x: 2089
+        y: 3321
+        width: 152
+        height: 215
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -225,10 +213,10 @@ TextureImporter:
       name: Slime Anim Spritesheet_5
       rect:
         serializedVersion: 2
-        x: 298
-        y: 3390
+        x: 335
+        y: 3230
         width: 197
-        height: 170
+        height: 167
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -238,6 +226,90 @@ TextureImporter:
       bones: []
       spriteID: b57b8d4d303fbb94298b29a904802569
       internalID: 1410599846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Anim Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 1071
+        y: 3231
+        width: 123
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf15f9bada4518c4dbde64142e1dcda8
+      internalID: -939415671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Anim Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 1423
+        y: 3230
+        width: 113
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77881253b0311e84f946fbe947d3af91
+      internalID: 287221863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Anim Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 1771
+        y: 3230
+        width: 124
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c27b68aaf8f60074cbdb267ccd412297
+      internalID: 958594675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Slime Anim Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 2083
+        y: 3230
+        width: 166
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 026b3d48aa428d5478a82e4ed261faa3
+      internalID: 1912135148
       vertices: []
       indices: 
       edges: []
@@ -254,11 +326,16 @@ TextureImporter:
     secondaryTextures: []
     nameFileIdTable:
       Slime Anim Spritesheet_1: -1037286325
+      Slime Anim Spritesheet_9: 958594675
       Slime Anim Spritesheet_3: -1774466682
+      Slime Anim Spritesheet_8: 287221863
       Slime Anim Spritesheet_0: 1221348649
+      Slime Anim Spritesheet_10: 1912135148
       Slime Anim Spritesheet_4: 1852889831
       Slime Anim Spritesheet_2: 2075172857
+      Slime Anim Spritesheet_7: -939415671
       Slime Anim Spritesheet_5: 1410599846
+      Slime Anim Spritesheet_6: 401443903
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

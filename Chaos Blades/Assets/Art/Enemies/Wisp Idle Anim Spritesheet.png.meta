@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -101,18 +101,6 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -123,9 +111,9 @@ TextureImporter:
         x: 458
         y: 3386
         width: 156
-        height: 359
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        height: 328
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -143,10 +131,10 @@ TextureImporter:
         serializedVersion: 2
         x: 778
         y: 3384
-        width: 156
-        height: 359
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        width: 155
+        height: 326
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -159,15 +147,99 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+      name: Wisp Idle Anim Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1136
+        y: 3597
+        width: 70
+        height: 123
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eca9acd848fc2e249af3180804e54701
+      internalID: 1114022983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wisp Idle Anim Spritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 1448
+        y: 3628
+        width: 72
+        height: 111
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55ce1378869741042b47090b53a13443
+      internalID: -2123520802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wisp Idle Anim Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 1761
+        y: 3642
+        width: 58
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b513284fbd71d948b7b3f48fb96932b
+      internalID: -266178235
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wisp Idle Anim Spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 2096
+        y: 3612
+        width: 57
+        height: 119
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39b1de55186a50d498d2b86256b0a155
+      internalID: 1955264750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: Wisp Idle Anim Spritesheet_6
       rect:
         serializedVersion: 2
         x: 2356
         y: 3374
-        width: 156
-        height: 359
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        width: 155
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -180,15 +252,78 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+      name: Wisp Idle Anim Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 2415
+        y: 3683
+        width: 25
+        height: 45
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6cb0ca38a5e56143986f126e077592e
+      internalID: -1183499736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wisp Idle Anim Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 1517
+        y: 3648
+        width: 5
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45e3f9261138639488aff41228a11eff
+      internalID: -601577337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wisp Idle Anim Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 1743
+        y: 3614
+        width: 29
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbf0f460e42e3074792818dc129aaf92
+      internalID: 561302979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: Wisp Idle Anim Spritesheet_10
       rect:
         serializedVersion: 2
         x: 1409
         y: 3380
         width: 156
-        height: 359
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -201,15 +336,36 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+      name: Wisp Idle Anim Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 1814
+        y: 3636
+        width: 5
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e9e1dfdfde70d140ac8ee728640ae5c
+      internalID: 376949151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: Wisp Idle Anim Spritesheet_12
       rect:
         serializedVersion: 2
         x: 2040
         y: 3376
         width: 156
-        height: 359
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        height: 262
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -222,15 +378,36 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+      name: Wisp Idle Anim Spritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 776
+        y: 3556
+        width: 26
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f4a12d6c297b447bcc4e783f969b50
+      internalID: -1713769949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: Wisp Idle Anim Spritesheet_14
       rect:
         serializedVersion: 2
         x: 1093
         y: 3382
         width: 156
-        height: 359
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -243,15 +420,36 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
+      name: Wisp Idle Anim Spritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 1115
+        y: 3598
+        width: 5
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 607c2447e2acb324589f501bbb946b7c
+      internalID: 2046466586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
       name: Wisp Idle Anim Spritesheet_16
       rect:
         serializedVersion: 2
         x: 1724
-        y: 3381
+        y: 3380
         width: 156
-        height: 359
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        height: 254
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
