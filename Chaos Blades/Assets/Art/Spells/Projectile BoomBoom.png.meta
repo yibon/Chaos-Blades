@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 2909d7171922ee14f937c40bc1d85440
+guid: 3e695c5d333aa4d408eaa2cb369769ad
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -115,91 +115,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: Wizard Idle Anim Spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 1203
-        y: 3420
-        width: 449
-        height: 428
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 15021300d69ee1149b9228f20f407e01
-      internalID: -1697671803
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wizard Idle Anim Spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 2270
-        y: 3424
-        width: 447
-        height: 424
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0e83b15ac4f398a4e96f89fbbcd8295e
-      internalID: -397306639
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wizard Idle Anim Spritesheet_5
-      rect:
-        serializedVersion: 2
-        x: 250
-        y: 3404
-        width: 447
-        height: 426
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c2636c6b3095c22459f8baa6d200fa65
-      internalID: -1498382909
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Wizard Idle Anim Spritesheet_7
-      rect:
-        serializedVersion: 2
-        x: 3328
-        y: 3396
-        width: 445
-        height: 420
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 85746741301446d41bb1291510f92886
-      internalID: -24788041
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -210,15 +126,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Wizard Idle Anim Spritesheet_5: -1498382909
-      Wizard Idle Anim Spritesheet_6: 1396845917
-      Wizard Idle Anim Spritesheet_3: -1697671803
-      Wizard Idle Anim Spritesheet_1: -747809626
-      Wizard Idle Anim Spritesheet_0: 1850231373
-      Wizard Idle Anim Spritesheet_7: -24788041
-      Wizard Idle Anim Spritesheet_4: -397306639
-      Wizard Idle Anim Spritesheet_2: -1602900395
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

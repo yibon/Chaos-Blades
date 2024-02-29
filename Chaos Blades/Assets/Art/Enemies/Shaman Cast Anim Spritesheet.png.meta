@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 6408638977a00ea45863a090d455473a
+guid: 980772008ef7977458d2bddab3751795
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wisp Idle Anim Spritesheet_0
+      name: Shaman Cast Anim Spritesheet_0
       rect:
         serializedVersion: 2
-        x: 458
-        y: 3386
-        width: 156
-        height: 359
+        x: 279
+        y: 3429
+        width: 230
+        height: 317
       alignment: 9
       pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c921cccbbce317c46bd899b022229cfb
-      internalID: -346427445
+      spriteID: 7b91607421fcf4b4598d2be479cfd4c6
+      internalID: -1729135801
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wisp Idle Anim Spritesheet_1
+      name: Shaman Cast Anim Spritesheet_1
       rect:
         serializedVersion: 2
-        x: 778
-        y: 3384
-        width: 156
-        height: 359
+        x: 1080
+        y: 3429
+        width: 243
+        height: 339
       alignment: 9
       pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +152,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 51ddde335214e784da06f52e671ff424
-      internalID: 89245187
+      spriteID: 900886f9011f47f43b1dd65824c93e94
+      internalID: 506057768
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wisp Idle Anim Spritesheet_6
+      name: Shaman Cast Anim Spritesheet_2
       rect:
         serializedVersion: 2
-        x: 2356
-        y: 3374
-        width: 156
-        height: 359
+        x: 1881
+        y: 3429
+        width: 222
+        height: 341
       alignment: 9
       pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,20 +173,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5a2f5e926a0666c4eb1c282ff0dd8081
-      internalID: -618527506
+      spriteID: 134354a7a3e471448924e21683f9b87e
+      internalID: 518083743
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wisp Idle Anim Spritesheet_10
+      name: Shaman Cast Anim Spritesheet_3
       rect:
         serializedVersion: 2
-        x: 1409
-        y: 3380
-        width: 156
-        height: 359
+        x: 2680
+        y: 3429
+        width: 221
+        height: 339
       alignment: 9
       pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,20 +194,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 65e8139b0f6a67442af2f82e86303ce2
-      internalID: 101010316
+      spriteID: 711cfde5e134d8843a50d04e89ea2a33
+      internalID: -1102998670
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wisp Idle Anim Spritesheet_12
+      name: Shaman Cast Anim Spritesheet_4
       rect:
         serializedVersion: 2
-        x: 2040
-        y: 3376
-        width: 156
-        height: 359
+        x: 3478
+        y: 3429
+        width: 235
+        height: 341
       alignment: 9
       pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -215,20 +215,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 91b88969a84b1e949959f872b76a0010
-      internalID: -477285335
+      spriteID: d315f1796f970e04eb4f4faf416923a7
+      internalID: 309881709
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wisp Idle Anim Spritesheet_14
+      name: Shaman Cast Anim Spritesheet_5
       rect:
         serializedVersion: 2
-        x: 1093
-        y: 3382
-        width: 156
-        height: 359
+        x: 4279
+        y: 3429
+        width: 222
+        height: 339
       alignment: 9
       pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -236,20 +236,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8701e4a7acff3d2488009d3bfe7fe477
-      internalID: 1456964949
+      spriteID: b771dfd2612691e42872594b6a59e952
+      internalID: 1115414925
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wisp Idle Anim Spritesheet_16
+      name: Shaman Cast Anim Spritesheet_6
       rect:
         serializedVersion: 2
-        x: 1724
-        y: 3381
-        width: 156
-        height: 359
+        x: 5078
+        y: 3429
+        width: 235
+        height: 341
       alignment: 9
       pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,8 +257,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07da617186462c149a61f54f2436739f
-      internalID: -1220202273
+      spriteID: bf08c2097ed2fbc48b2568a64ff61b34
+      internalID: 1173354676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shaman Cast Anim Spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 2630
+        width: 218
+        height: 339
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70ee54acb0dfc2b439c7bdbbceb56996
+      internalID: 524878923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shaman Cast Anim Spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 2630
+        width: 236
+        height: 339
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36c8ab86eeeb4604f8b0535e7ce84126
+      internalID: 1719235413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shaman Cast Anim Spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 1881
+        y: 2630
+        width: 219
+        height: 339
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9036a8a2a8bd7e4283cbfa81a25ef93
+      internalID: -1503953537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shaman Cast Anim Spritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 2680
+        y: 2630
+        width: 224
+        height: 339
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8f133808ef62d4479c0442dc2784a9e
+      internalID: -2037215439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shaman Cast Anim Spritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 3481
+        y: 2630
+        width: 240
+        height: 339
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cb893f219adb25488a6a6b846722297
+      internalID: 1520286395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shaman Cast Anim Spritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 4279
+        y: 2630
+        width: 230
+        height: 317
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0d4b5c2cbfa1a14cb5d5fd7b6b39932
+      internalID: -2043822515
       vertices: []
       indices: 
       edges: []
@@ -274,23 +400,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Wisp Idle Anim Spritesheet_16: -1220202273
-      Wisp Idle Anim Spritesheet_9: 561302979
-      Wisp Idle Anim Spritesheet_1: 89245187
-      Wisp Idle Anim Spritesheet_7: -1183499736
-      Wisp Idle Anim Spritesheet_10: 101010316
-      Wisp Idle Anim Spritesheet_14: 1456964949
-      Wisp Idle Anim Spritesheet_4: -266178235
-      Wisp Idle Anim Spritesheet_8: -601577337
-      Wisp Idle Anim Spritesheet_0: -346427445
-      Wisp Idle Anim Spritesheet_13: -1713769949
-      Wisp Idle Anim Spritesheet_15: 2046466586
-      Wisp Idle Anim Spritesheet_3: -2123520802
-      Wisp Idle Anim Spritesheet_11: 376949151
-      Wisp Idle Anim Spritesheet_12: -477285335
-      Wisp Idle Anim Spritesheet_5: 1955264750
-      Wisp Idle Anim Spritesheet_6: -618527506
-      Wisp Idle Anim Spritesheet_2: 1114022983
+      Shaman Cast Anim Spritesheet_11: 1520286395
+      Shaman Cast Anim Spritesheet_9: -1503953537
+      Shaman Cast Anim Spritesheet_4: 309881709
+      Shaman Cast Anim Spritesheet_0: -1729135801
+      Shaman Cast Anim Spritesheet_12: -2043822515
+      Shaman Cast Anim Spritesheet_5: 1115414925
+      Shaman Cast Anim Spritesheet_1: 506057768
+      Shaman Cast Anim Spritesheet_10: -2037215439
+      Shaman Cast Anim Spritesheet_2: 518083743
+      Shaman Cast Anim Spritesheet_8: 1719235413
+      Shaman Cast Anim Spritesheet_3: -1102998670
+      Shaman Cast Anim Spritesheet_7: 524878923
+      Shaman Cast Anim Spritesheet_6: 1173354676
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

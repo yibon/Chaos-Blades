@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7b4ca424467ad2e4b940445f5cef2147
+guid: 011fdd308d4f1cd46a2e678d370108e1
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,85 +117,106 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wisp Attack Anim Spritesheet_0
+      name: Golem Anim Spritesheet_0
       rect:
         serializedVersion: 2
-        x: 1639
-        y: 3432
-        width: 259
-        height: 279
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 249
+        y: 3415
+        width: 279
+        height: 344
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45746e3a92e64ba4782a553429dc3e07
-      internalID: 2107268004
+      spriteID: d21b1da9fcc9f3641805e08fc533f01f
+      internalID: 1377167199
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wisp Attack Anim Spritesheet_1
+      name: Golem Anim Spritesheet_1
       rect:
         serializedVersion: 2
-        x: 2188
-        y: 3410
-        width: 246
-        height: 281
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1039
+        y: 3420
+        width: 298
+        height: 359
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 76e41ad3d1f996f4490bf9b2b608e895
-      internalID: -496887079
+      spriteID: 1229c73273871f442b520bec0c63ab76
+      internalID: -1832066656
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wisp Attack Anim Spritesheet_3
+      name: Golem Anim Spritesheet_2
       rect:
         serializedVersion: 2
-        x: 563
-        y: 3270
-        width: 228
-        height: 300
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 1857
+        y: 3423
+        width: 303
+        height: 366
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bfef003592b200f45b7e3b4631ab7756
-      internalID: 1458303036
+      spriteID: 67f65b619673a9741a03b9cd122f44ea
+      internalID: 1957540899
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wisp Attack Anim Spritesheet_4
+      name: Golem Anim Spritesheet_3
       rect:
         serializedVersion: 2
-        x: 1078
-        y: 3273
-        width: 274
-        height: 266
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 2655
+        y: 3420
+        width: 298
+        height: 361
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7077c6c3236da324197f024f5c71cf07
-      internalID: 843791665
+      spriteID: ae12e5d9582ef8d4b9fb66e94c80375f
+      internalID: 498048100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Golem Anim Spritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 3451
+        y: 3412
+        width: 284
+        height: 358
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8cc3c116ed4d7e42bf28ff0a9016f0c
+      internalID: 848901274
       vertices: []
       indices: 
       edges: []
@@ -211,12 +232,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Wisp Attack Anim Spritesheet_5: 1073889690
-      Wisp Attack Anim Spritesheet_2: 1209528046
-      Wisp Attack Anim Spritesheet_4: 843791665
-      Wisp Attack Anim Spritesheet_1: -496887079
-      Wisp Attack Anim Spritesheet_3: 1458303036
-      Wisp Attack Anim Spritesheet_0: 2107268004
+      Golem Anim Spritesheet_1: -1832066656
+      Golem Anim Spritesheet_4: 848901274
+      Golem Anim Spritesheet_2: 1957540899
+      Golem Anim Spritesheet_0: 1377167199
+      Golem Anim Spritesheet_3: 498048100
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
