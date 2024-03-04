@@ -383,7 +383,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hp: 100
-  speed: 5
+  speed: 3
   attack: 0.3
   attackSpeed: 1
   range: 1

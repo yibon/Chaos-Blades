@@ -20,6 +20,10 @@ public class EnemyAI : MonoBehaviour
 
     public bool isHit = false;
 
+    //spawn bullet
+    public GameObject EnemyBulletPrefab;
+    public Transform firePoint;
+    float nextAttackTime;
 
     GameObject king;
     public GameObject[] nonSupportEnemies;
@@ -52,7 +56,10 @@ public class EnemyAI : MonoBehaviour
             }
             else //in range
             {
-
+                if (range > 1 && nextAttackTime < Time.time)
+                {
+                    RangeAttack();
+                }
             }
         }
         else //enemy type is support
@@ -65,6 +72,7 @@ public class EnemyAI : MonoBehaviour
                 }
                 else //in range
                 {
+                    if (nextAttackTime < Time.time)
                     SupportBuff();
                 }
             }
@@ -88,11 +96,19 @@ public class EnemyAI : MonoBehaviour
 
     void Run(GameObject go) //function used when not in range
     {
-        //this.transform.position = Vector2.MoveTowards(this.transform.position, king.transform.position, speed);
         Vector3 forceApplied = go.transform.position - this.transform.position;
         forceApplied = forceApplied.normalized;
         forceApplied = forceApplied * 1f;
         rb2D.AddForce(forceApplied);
+    }
+
+    void RangeAttack()
+    {
+        //spawn bullet prefab
+        GameObject EnemyProjectile = Instantiate(EnemyBulletPrefab, this.firePoint.position, this.firePoint.rotation);
+        EnemyProjectile.transform.parent = this.transform;
+
+        nextAttackTime = Time.time + attackSpeed;
     }
 
     void Attack() //used when in range of king
@@ -103,7 +119,9 @@ public class EnemyAI : MonoBehaviour
 
     void SupportBuff() //special class used for support enemy
     {
+        nonSupportEnemies[0].GetComponent<EnemyAI>().attack += 1;
 
+        nextAttackTime = Time.time + attackSpeed;
     }
 
     void Ded()
@@ -120,9 +138,7 @@ public class EnemyAI : MonoBehaviour
         if (collision.gameObject.CompareTag("King"))
         {
             Attack();
-            //Debug.Log("cooling down");
             StartCoroutine(Cooldowntimer(attackSpeed));
-            //Debug.Log("ready");
         }
         
     }
