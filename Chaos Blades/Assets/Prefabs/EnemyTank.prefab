@@ -78,6 +78,7 @@ MonoBehaviour:
   rb2D: {fileID: 914366520104333656}
   c2D: {fileID: 0}
   isHit: 0
+  animator: {fileID: 914366520246198428}
   EnemyBulletPrefab: {fileID: 0}
   firePoint: {fileID: 0}
   nonSupportEnemies: []
@@ -95,7 +96,7 @@ GameObject:
   - component: {fileID: 914366520246198428}
   m_Layer: 0
   m_Name: EnemyTank Sprite
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

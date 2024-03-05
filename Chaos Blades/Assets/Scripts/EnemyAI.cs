@@ -20,6 +20,8 @@ public class EnemyAI : MonoBehaviour
 
     public bool isHit = false;
 
+    public Animator animator;
+
     //spawn bullet
     public GameObject EnemyBulletPrefab;
     public Transform firePoint;
@@ -58,10 +60,14 @@ public class EnemyAI : MonoBehaviour
             else
             {
                 //if enemy ranged
-                if (range > 1 && nextAttackTime < Time.time)
+                if (range > 1)
                 {
-                    RangeAttack();
+                    if (nextAttackTime < Time.time)
+                    {
+                        RangeAttack();
+                    }
                 }
+                
             }
         }
         #endregion
@@ -80,7 +86,10 @@ public class EnemyAI : MonoBehaviour
                 else //in range
                 {
                     if (nextAttackTime < Time.time)
+                    {
                         SupportBuff();
+                    }
+                        
                 }
             }
             //only left support
@@ -112,6 +121,8 @@ public class EnemyAI : MonoBehaviour
 
     void RangeAttack()
     {
+        animator.Play("Wisp_Attack");
+
         //spawn bullet prefab
         GameObject EnemyProjectile = Instantiate(EnemyBulletPrefab, this.firePoint.position, this.firePoint.rotation);
         EnemyProjectile.transform.parent = this.transform;
@@ -126,6 +137,7 @@ public class EnemyAI : MonoBehaviour
 
     void SupportBuff() //special class used for support enemy
     {
+        animator.Play("Shaman_Cast");
         nonSupportEnemies[0].GetComponent<EnemyAI>().attack += 1;
 
         nextAttackTime = Time.time + attackSpeed;

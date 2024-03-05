@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5250602284631087550}
   m_Layer: 0
   m_Name: EnemySupport Sprite
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -120,9 +120,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5250602284631087548}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3c96ab9418c24be48a0e3eb8f482c51f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -210,6 +210,7 @@ MonoBehaviour:
   rb2D: {fileID: 5250602285302975545}
   c2D: {fileID: 0}
   isHit: 0
+  animator: {fileID: 5250602284631087550}
   EnemyBulletPrefab: {fileID: 0}
   firePoint: {fileID: 0}
   nonSupportEnemies: []

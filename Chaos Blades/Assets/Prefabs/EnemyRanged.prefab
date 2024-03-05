@@ -78,6 +78,7 @@ MonoBehaviour:
   rb2D: {fileID: 8309703424359002405}
   c2D: {fileID: 0}
   isHit: 0
+  animator: {fileID: 8309703424735958625}
   EnemyBulletPrefab: {fileID: 5353225684486109190, guid: c5c6d2855ff3c7f4588dc828c2919185, type: 3}
   firePoint: {fileID: 6239097402469648996}
   nonSupportEnemies: []
@@ -95,7 +96,7 @@ GameObject:
   - component: {fileID: 8309703424735958625}
   m_Layer: 0
   m_Name: EnemyRanged Sprite
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -204,7 +205,7 @@ Animator:
   m_GameObject: {fileID: 8309703424735958639}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 36de9e49ff11f4f4997737c27d4993ee, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -238,7 +239,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9176689213800696380}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.122, y: 0.179, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
