@@ -210,4 +210,6 @@ MonoBehaviour:
   rb2D: {fileID: 5250602285302975545}
   c2D: {fileID: 0}
   isHit: 0
+  EnemyBulletPrefab: {fileID: 0}
+  firePoint: {fileID: 0}
   nonSupportEnemies: []

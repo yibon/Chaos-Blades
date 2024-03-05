@@ -78,6 +78,8 @@ MonoBehaviour:
   rb2D: {fileID: 914366520104333656}
   c2D: {fileID: 0}
   isHit: 0
+  EnemyBulletPrefab: {fileID: 0}
+  firePoint: {fileID: 0}
   nonSupportEnemies: []
 --- !u!1 &914366520246198418
 GameObject:
@@ -199,9 +201,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914366520246198418}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a021ee6ff8608d047b7fc37cd953ae60, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

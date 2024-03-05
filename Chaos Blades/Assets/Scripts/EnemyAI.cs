@@ -38,47 +38,56 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //destory if ded
+        //destory if 0 hp
         if (hp <= 0)
         {
             Destroy(this.gameObject); 
         }
 
-        nonSupportEnemies = GameObject.FindGameObjectsWithTag("Enemy"); //constantly updating list
-        //Debug.Log(nonSupportEnemies.Length);
+        nonSupportEnemies = GameObject.FindGameObjectsWithTag("Enemy");
         //look for tag based on enemy type
-        if (name != "Support") // enemy type is not support 
+        #region General Enemy AI 
+        if (name != "Support") 
         {
-            //checking distance from king and enemy by minusing the game object current pos and king current pos
-            if ((this.gameObject.transform.position - king.transform.position).magnitude > range) // not in range
+            //not in range
+            if ((this.gameObject.transform.position - king.transform.position).magnitude > range) 
             {
                 Run(king);
             }
-            else //in range
+            //in range
+            else
             {
+                //if enemy ranged
                 if (range > 1 && nextAttackTime < Time.time)
                 {
                     RangeAttack();
                 }
             }
         }
-        else //enemy type is support
+        #endregion
+        #region Support Enemy AI
+        //Support Enemy
+        else
         {
-            if (nonSupportEnemies.Length > 0) //still have other types of enemies around
+            //still have other types of enemies around
+            if (nonSupportEnemies.Length > 0) 
             {
-                if ((this.gameObject.transform.position - nonSupportEnemies[0].transform.position).magnitude > range) // not in range
+                // not in range
+                if ((this.gameObject.transform.position - nonSupportEnemies[0].transform.position).magnitude > range) 
                 {
                     Run(nonSupportEnemies[0]);
                 }
                 else //in range
                 {
                     if (nextAttackTime < Time.time)
-                    SupportBuff();
+                        SupportBuff();
                 }
             }
-            else //only left support
+            //only left support
+            else
             {
-                if ((this.gameObject.transform.position - king.transform.position).magnitude > range) // not in range
+                // not in range
+                if ((this.gameObject.transform.position - king.transform.position).magnitude > range) 
                 {
                     Run(king);
                 }
@@ -89,12 +98,11 @@ public class EnemyAI : MonoBehaviour
             }
             
         }
-
-        Ded();
-
+        #endregion
     }
 
-    void Run(GameObject go) //function used when not in range
+    //function used when not in range
+    void Run(GameObject go)
     {
         Vector3 forceApplied = go.transform.position - this.transform.position;
         forceApplied = forceApplied.normalized;
@@ -114,7 +122,6 @@ public class EnemyAI : MonoBehaviour
     void Attack() //used when in range of king
     {
         king.GetComponentInChildren<KingAI>().hp -= attack;
-        //Debug.Log("king ouch");
     }
 
     void SupportBuff() //special class used for support enemy
@@ -122,15 +129,6 @@ public class EnemyAI : MonoBehaviour
         nonSupportEnemies[0].GetComponent<EnemyAI>().attack += 1;
 
         nextAttackTime = Time.time + attackSpeed;
-    }
-
-    void Ded()
-    {
-        if (this.hp < 0)
-        {
-            // replace this with death animation
-            Destroy(this.gameObject);
-        }
     }
     
     private void OnCollisionEnter2D(Collision2D collision)
@@ -140,7 +138,6 @@ public class EnemyAI : MonoBehaviour
             Attack();
             StartCoroutine(Cooldowntimer(attackSpeed));
         }
-        
     }
 
     IEnumerator Cooldowntimer(float time)

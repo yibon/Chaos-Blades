@@ -99,6 +99,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1d0bb085e71c30c46aad10e87f9e8957, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currSpell: 0
+  spriteRenderers:
+  - {fileID: 21300000, guid: cb75363adeae6324ebc77e404cc82f4d, type: 3}
+  - {fileID: 21300000, guid: 3e695c5d333aa4d408eaa2cb369769ad, type: 3}
+  - {fileID: 21300000, guid: 35c63e0afd6b95749825004914b705dc, type: 3}
+  - {fileID: 21300000, guid: d9edecfd573c39c4aac79885023e2e4b, type: 3}
+  SpriteRenderer: {fileID: 4433918336334141582}
 --- !u!50 &99497770180984370
 Rigidbody2D:
   serializedVersion: 4

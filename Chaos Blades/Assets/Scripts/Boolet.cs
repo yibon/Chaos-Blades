@@ -6,7 +6,7 @@ public class Boolet : MonoBehaviour
     // Start is called before the first frame update
     // 0- smoll pew, 1- beeg boom, 2- helf, 3- protecc
     public int currSpell;
-    
+
     float bulletAmt;
     // positive for healing, negative for damage, 0 for nullifying
     int healthMultiplier;
