@@ -47,7 +47,7 @@ public class Boolet : MonoBehaviour
     {
         //Debug.Log("knock knock who's there" +  collision.gameObject.tag);
         // * note need to use GetComponentInParent() * // 
-        if (collision.gameObject.CompareTag("Enemy"))
+        if (collision.transform.root.CompareTag("Enemy"))
         {
             EnemyAI _enemy = collision.gameObject.GetComponentInParent<EnemyAI>();
             _enemy.hp = _enemy.hp + (healthMultiplier * bulletAmt);

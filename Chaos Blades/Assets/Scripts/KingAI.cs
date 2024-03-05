@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
 public class KingAI : MonoBehaviour
@@ -47,9 +48,11 @@ public class KingAI : MonoBehaviour
 
         if (hp <= 0)
         {
-            Destroy(this.gameObject);
+            
             // put in the game over screen here
             // can start the calculations for score now
+            ScoreManager.instance.GameOver();
+            Destroy(this.gameObject);
         }
     }
 

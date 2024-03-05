@@ -43,7 +43,8 @@ public class EnemyAI : MonoBehaviour
         //destory if 0 hp
         if (hp <= 0)
         {
-            Destroy(this.gameObject); 
+            ScoreManager.instance.EnemyKilled(scoreAwardedOnDeath);
+            Destroy(this.gameObject);
         }
 
         nonSupportEnemies = GameObject.FindGameObjectsWithTag("Enemy");
