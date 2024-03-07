@@ -1,5 +1,6 @@
 
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Boolet : MonoBehaviour
@@ -71,7 +72,7 @@ public class Boolet : MonoBehaviour
     {
         //Debug.Log("knock knock who's there" +  collision.gameObject.tag);
         // * note need to use GetComponentInParent() * // 
-        if (collision.transform.root.CompareTag("Enemy"))
+        if (collision.transform.root.CompareTag("Enemy") || collision.transform.root.CompareTag("EnemySupport"))
         {
             EnemyAI _enemy = collision.gameObject.GetComponentInParent<EnemyAI>();
             if (currSpell == 3)
@@ -109,12 +110,13 @@ public class Boolet : MonoBehaviour
                 healthMultiplier = 0;
             }
 
-            _king.hp = _king.hp + (healthMultiplier * bulletAmt);
-
             if (healthMultiplier < 0)
             {
                 _king.kingIsHit = true;
             }
+
+            _king.hp = _king.hp + (healthMultiplier * bulletAmt);
+            
             Debug.Log("King Helf: " + _king.hp);
             Destroy(this.gameObject);
         }

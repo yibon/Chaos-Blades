@@ -1,6 +1,5 @@
 
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class KingAI : MonoBehaviour
@@ -29,6 +28,8 @@ public class KingAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        hp = Mathf.Clamp(hp, 0, 100);
+
         if (kingProtected)
         {
             protectedSprite.SetActive(true);
@@ -102,7 +103,7 @@ public class KingAI : MonoBehaviour
         Color originalColour = go.GetComponentInChildren<SpriteRenderer>().color;
         go.GetComponentInChildren<SpriteRenderer>().color = Color.red; 
         yield return new WaitForSeconds(0.1f);
-        go.GetComponentInChildren<SpriteRenderer>().color= originalColour;
+        go.GetComponentInChildren<SpriteRenderer>().color = originalColour;
         StopCoroutine("EnemyFlash");
     }
 }
