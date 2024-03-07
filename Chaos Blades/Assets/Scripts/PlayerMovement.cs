@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     public int protectionSpellIndex = 0;
 
     float spellChargeTimer = 0;
+    public Image barImage;
 
     [Header("SHOOTING")] 
     // Singleton this? 
@@ -135,6 +137,8 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetMouseButton(1)) //healing with RMB
             {
                 spellChargeTimer += Time.deltaTime;
+                barImage.fillAmount = spellChargeTimer / 3;
+                
                 castingProtecc = true;
                 Debug.Log("protecc Holding");
             }
