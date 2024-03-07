@@ -14,8 +14,8 @@ public class Shooting : MonoBehaviour
     public GameObject[] attBulletPF;
     public GameObject[] defBulletPF;
 
-    public static int attOrDef;
-    public static int spellIndex;
+    //public static int attOrDef;
+    //public static int spellIndex;
     // Start is called before the first frame update
     void Start()
     {
@@ -34,26 +34,11 @@ public class Shooting : MonoBehaviour
         float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
 
         transform.rotation = Quaternion.Euler(0, 0, rotZ);
-
-        if (Input.GetMouseButton(0) && canAttack)
-        {
-            attOrDef = 0;
-            Shoot();
-            canAttack = false;
-        }        
-        
-        if (Input.GetMouseButton(1) && canProtect)
-        {
-            attOrDef = 1;
-            Shoot();
-            canProtect = false;
-        }
-
     }
 
     //SHOOTING
     //               0- attack, 1- defence
-    public void Shoot()
+    public void Shoot(int attOrDef, int spellIndex)
     {
         if (attOrDef == 0)
         {

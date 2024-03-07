@@ -38,6 +38,8 @@ public class PlayerMovement : MonoBehaviour
     float spellChargeTimer = 0;
     public Image barImage;
 
+    Shooting _shooting;
+
     //[Header("SHOOTING")] 
     //// Singleton this? 
     //public Transform firePoint;
@@ -52,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        _shooting = gameObject.GetComponentInChildren<Shooting>();
     }
 
     // Update is called once per frame
@@ -140,7 +142,6 @@ public class PlayerMovement : MonoBehaviour
                 spellChargeTimer += Time.deltaTime;
                 barImage.fillAmount = spellChargeTimer / 3;
 
-                //Shooting.canFire = true;
                 castingProtecc = true;
                 Debug.Log("protecc Holding");
             }
@@ -151,36 +152,26 @@ public class PlayerMovement : MonoBehaviour
                 proteccSpellCooldownList[proteccIndex] = SpellManager.instance.proteccSpells[proteccIndex].cooldown;
                 if (spellChargeTimer >= 0 && spellChargeTimer <= 1) //if timer more than 0 and less than equal 1, basic (Smol) charge
                 {
-                    //Shooting.attOrDef = 1;
-                    Shooting.spellIndex = proteccIndex;
-
-                    //Shoot(1, proteccIndex);
+                    _shooting.Shoot(1, proteccIndex);
                     Debug.Log("Smol " + SpellManager.instance.proteccSpells[proteccIndex].Name); //replace with instantiation code
-                    //Shooting.canProtect = false;
+                   
                 }
                 else if (spellChargeTimer > 1 && spellChargeTimer <= 2) //if timer more than 1 and less than equal 2, med charge
                 {
-                    //Shooting.attOrDef = 1;
-                    Shooting.spellIndex = proteccIndex;
-                    //Shoot(1, proteccIndex);
+                    _shooting.Shoot(1, proteccIndex);
                     Debug.Log("Med " + SpellManager.instance.proteccSpells[proteccIndex].Name); //replace with instantiation code
                     proteccSpellCooldownList[proteccIndex] += 1;
                     ManaCost += 1;
-                    //Shooting.canProtect = false;
                 }
                 else // timer more than 2, beeg charge
                 {
-                    //Shooting.attOrDef = 1;
-                    Shooting.spellIndex = proteccIndex;
-                    //Shoot(1, proteccIndex);
+                    _shooting.Shoot(1, proteccIndex);
                     Debug.Log("Beeg " + SpellManager.instance.proteccSpells[proteccIndex].Name); //replace with instantiation code
                     proteccSpellCooldownList[proteccIndex] += 2;
                     ManaCost += 2;
-                    //Shooting.canProtect = false;
                 }
                 spellChargeTimer = 0;
                 castingProtecc = false;
-                //Shooting.canProtect = false;
                 currMana -= ManaCost;
                 Debug.Log(SpellManager.instance.proteccSpells[proteccIndex].Name + " casted, left Mana: " + currMana);
                 
@@ -231,11 +222,7 @@ public class PlayerMovement : MonoBehaviour
                 //if timer more than 0 and less than equal 1, basic (Smol) charge
                 if (spellChargeTimer >= 0 && spellChargeTimer < 1) 
                 {
-                    //replace with instantiation code
-                    //Shooting.canAttack = false;
-                    //Shooting.attOrDef = 0;
-                    Shooting.spellIndex = attackIndex;
-                    //Shoot(0, attackIndex);
+                    _shooting.Shoot(0, attackIndex);
                     Debug.Log("Smol " + SpellManager.instance.attackSpells[attackIndex].Name); 
                 }
                 
@@ -244,10 +231,7 @@ public class PlayerMovement : MonoBehaviour
                 {
                     //replace with instantiation code
                     Debug.Log("Med " + SpellManager.instance.attackSpells[attackIndex].Name);
-                    //Shooting.canFire = false;
-                    //Shooting.attOrDef = 0;
-                    Shooting.spellIndex = attackIndex;
-                    //Shoot(0, attackIndex);
+                    _shooting.Shoot(0, attackIndex);
                     attackSpellCooldownList[attackIndex] += 1;
                     ManaCost += 1;
                 }
@@ -256,18 +240,12 @@ public class PlayerMovement : MonoBehaviour
                     //replace with instantiation code
                     Debug.Log("Beeg " + SpellManager.instance.attackSpells[attackIndex].Name);
 
-                    //Shooting.canFire = false;
-                    //Shooting.attOrDef = 0;
-                    Shooting.spellIndex = attackIndex;
-
-                    //Shoot(0, attackIndex);
+                    _shooting.Shoot(0, attackIndex);
                     attackSpellCooldownList[attackIndex] += 2;
                     ManaCost += 2;
                 }
                 spellChargeTimer = 0;
                 castingAttack = false;
-
-                //Shooting.canAttack = false;
                 currMana -= ManaCost;
                 Debug.Log(SpellManager.instance.attackSpells[attackIndex].Name + " casted, left Mana: " + currMana);
             }
@@ -297,6 +275,4 @@ public class PlayerMovement : MonoBehaviour
             }
         }
     }
-
-    // 
 }
