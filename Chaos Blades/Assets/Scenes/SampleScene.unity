@@ -148,7 +148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 20453276}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.15, y: 1.51, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4007,6 +4007,7 @@ MonoBehaviour:
   currMana: 100
   attackSpellCooldownList: []
   proteccSpellCooldownList: []
+  animator: {fileID: 1411908701}
   playerSpeed: 5
   attackSpellIndex: 0
   protectionSpellIndex: 0
@@ -4052,12 +4053,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1592336452, guid: 8ea4026508fc6ec489d7e624525c88f8, type: 3}
+  m_Sprite: {fileID: -1187290959, guid: 8ea4026508fc6ec489d7e624525c88f8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.25, y: 4.2704177}
+  m_Size: {x: 3.25, y: 4.290419}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -4128,9 +4129,9 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 3.25, y: 4.2704177}
-    newSize: {x: 3.25, y: 4.2704177}
+    pivot: {x: 0.5, y: 0.1}
+    oldSize: {x: 3.24, y: 4.3204226}
+    newSize: {x: 3.25, y: 4.290419}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -4146,9 +4147,9 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411908694}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0d81d06d5683fb746b92a7dd05914574, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

@@ -33,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -70,7 +70,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -117,36 +117,15 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Wizard Walk Anim Spritesheet_1
-      rect:
-        serializedVersion: 2
-        x: 1014
-        y: 3368
-        width: 318
-        height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: de24bcaa141467942bd5912fd5582a4b
-      internalID: -768388977
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Wizard Walk Anim Spritesheet_4
       rect:
         serializedVersion: 2
-        x: 2617
-        y: 3368
-        width: 317
-        height: 430
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1809
+        y: 3367
+        width: 314
+        height: 429
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -162,12 +141,12 @@ TextureImporter:
       name: Wizard Walk Anim Spritesheet_6
       rect:
         serializedVersion: 2
-        x: 221
-        y: 3371
-        width: 323
-        height: 424
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2615
+        y: 3367
+        width: 320
+        height: 432
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -180,36 +159,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Wizard Walk Anim Spritesheet_7
-      rect:
-        serializedVersion: 2
-        x: 1810
-        y: 3368
-        width: 312
-        height: 427
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 39e735c8d14199e43b62c959c27fec71
-      internalID: -2043197007
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: Wizard Walk Anim Spritesheet_12
       rect:
         serializedVersion: 2
-        x: 221
-        y: 2570
-        width: 323
-        height: 424
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 220
+        y: 2565
+        width: 325
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -225,12 +183,12 @@ TextureImporter:
       name: Wizard Walk Anim Spritesheet_13
       rect:
         serializedVersion: 2
-        x: 1017
-        y: 2576
-        width: 323
-        height: 421
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 1016
+        y: 2574
+        width: 325
+        height: 424
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -247,11 +205,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1816
-        y: 2581
-        width: 328
-        height: 413
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        y: 2580
+        width: 329
+        height: 415
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -267,12 +225,12 @@ TextureImporter:
       name: Wizard Walk Anim Spritesheet_15
       rect:
         serializedVersion: 2
-        x: 2617
-        y: 2576
-        width: 325
-        height: 421
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 2616
+        y: 2574
+        width: 327
+        height: 424
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -280,6 +238,48 @@ TextureImporter:
       bones: []
       spriteID: 42e96ab30de30f247947c9b5e8dc03fc
       internalID: 826035273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard Walk Anim Spritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 3370
+        width: 325
+        height: 426
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba1acc81a8052474ba070cf83326e8d7
+      internalID: -1556383427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wizard Walk Anim Spritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 1015
+        y: 3368
+        width: 318
+        height: 431
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15a64579cb3d9864bb35f7bd99f3d82c
+      internalID: 1226536262
       vertices: []
       indices: 
       edges: []
