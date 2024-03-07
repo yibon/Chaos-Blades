@@ -22,10 +22,10 @@ public class SpellManager : MonoBehaviour
         }
 
         #region Creating Spells and Adding to list
-        Spells healing = new Spells("Helt", 5, 0, 0, 1, 1, 1, 5, "string");
-        Spells proteccTheAttacc = new Spells("Protecc the Attacc" ,0, 5, 0, 1, 1, 2, 5, "string");
-        Spells smolPewPew = new Spells("Smol Pew Pew" ,0, 0, 5, 1, 1, 1, 5, "string");
-        Spells beegBoomBoom = new Spells("Beeg Boom Boom", 0, 0, 5, 1, 1, 1, 5, "string");
+        Spells healing = new Spells("Helt", 5, 0,0,4,8,2.5f, "string");
+        Spells proteccTheAttacc = new Spells("Protecc the Attacc" ,0,1,0,1,4,2.5f , "string");
+        Spells smolPewPew = new Spells("Smol Pew Pew" ,0,0,8,1,3,0.8f, "string");
+        Spells beegBoomBoom = new Spells("Beeg Boom Boom", 0,0,3,4,3,0.8f, "string");
 
         attackSpells.Add(smolPewPew);
         attackSpells.Add(beegBoomBoom);
@@ -44,19 +44,17 @@ public struct Spells
     public float damageReduce;
     public float damageDealt;
     public float radius;
-    public float fireRate;
     public float manaCost;
     public float cooldown;
     public string flavourText;
 
-    public Spells(string Name, float healthGain, float damageReduce, float damageDealt, float radius, float fireRate, float manaCost, float cooldown, string flavourText)
+    public Spells(string Name, float healthGain, float damageReduce, float damageDealt, float radius, float manaCost, float cooldown, string flavourText)
     {
         this.Name = Name;
         this.healthGain = healthGain;
         this.damageReduce = damageReduce;
         this.damageDealt = damageDealt;
         this.radius = radius;
-        this.fireRate = fireRate;
         this.manaCost = manaCost;
         this.cooldown = cooldown;
         this.flavourText = flavourText;

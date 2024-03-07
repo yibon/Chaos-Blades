@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -7,7 +8,8 @@ public class PlayerMovement : MonoBehaviour
     float verticalIP;
 
     //Player Stats
-    public float currMana = 10;
+    public float currMana = 100;
+    float manaRegenRate = 4;
     public List<float> attackSpellCooldownList = new List<float>();
     public List<float> proteccSpellCooldownList = new List<float>();
     float attackSpell1CD = 0;
@@ -35,9 +37,9 @@ public class PlayerMovement : MonoBehaviour
     [Header("SHOOTING")] 
     // Singleton this? 
     public Transform firePoint;
-    public GameObject bulletPF;
-
     public float bulletForce = 20f;
+    public GameObject[] attBulletPF;
+    public GameObject[] defBulletPF;
     private void Awake()
     {
         attackSpellCooldownList.Add(attackSpell1CD);
@@ -59,9 +61,7 @@ public class PlayerMovement : MonoBehaviour
 
         direction = new Vector2(horizontalIP, verticalIP);
 
-        #region temp mana increase
-        if (Input.GetKeyDown(KeyCode.M)) { currMana = 10; Debug.Log(currMana); }
-        #endregion
+        
 
         #region choosing spell
         if (Input.GetKeyDown(KeyCode.Q)) //attack
@@ -116,6 +116,14 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + direction * moveSpeed * Time.fixedDeltaTime);
+        
+        #region mana regen per secon
+        currMana += manaRegenRate * Time.deltaTime;
+        if (currMana > 100)
+        {
+            currMana = 100;
+        }
+        #endregion
     }
 
     public void ChargeProteccSpell(int proteccIndex)
@@ -262,38 +270,52 @@ public class PlayerMovement : MonoBehaviour
     //               0- attack, 1- defence
     public void Shoot(int attOrDef, int spellIndex)
     {
-        GameObject bullet = Instantiate(bulletPF, firePoint.position, firePoint.rotation);
-
-        Rigidbody2D bullet_rb = bullet.GetComponent<Rigidbody2D>();
-        bullet_rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
-        
-        Boolet _boolet = bullet.GetComponent<Boolet>();
-
-        switch (attOrDef)
+        if (attOrDef == 0)
         {
-            case 0:
-                switch (spellIndex)
-                {
-                    case 0:
-                        _boolet.currSpell = 0;
-                        break;
-                    case 1:
-                        _boolet.currSpell = 1;
-                        break;
-                }
-                break;
-
-            case 1:
-                switch (spellIndex)
-                {
-                    case 0:
-                        _boolet.currSpell = 2;
-                        break;
-                    case 1:
-                        _boolet.currSpell = 3;
-                        break;
-                }
-                break;
+            //spawn bullet as attack spell
+            GameObject bullet = Instantiate(attBulletPF[spellIndex], firePoint.position, firePoint.rotation);
+            
+            //set attackspell bullet rb and launch it
+            Rigidbody2D bullet_rb = bullet.GetComponent<Rigidbody2D>();
+            bullet_rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+            
+            //setting the bullet script
+            Boolet _boolet = bullet.GetComponent<Boolet>();
+            
+            //checking which spell
+            switch (spellIndex)
+            {
+                case 0:
+                    _boolet.currSpell = 0;
+                    break;
+                case 1:
+                    _boolet.currSpell = 1;
+                    break;
+            }
+        }
+        else if(attOrDef == 1) 
+        {
+            //spawn bullet as def spell
+            GameObject bullet = Instantiate(defBulletPF[spellIndex], firePoint.position, firePoint.rotation);
+            
+            //set defspell bullet rb and launch it
+            Rigidbody2D bullet_rb = bullet.GetComponent<Rigidbody2D>();
+            bullet_rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
+            
+            //setting the bullet script
+            Boolet _boolet = bullet.GetComponent<Boolet>();
+            
+            //checking which spell
+            switch (spellIndex)
+            {
+                case 0:
+                    _boolet.currSpell = 2;
+                    break;
+                case 1:
+                    _boolet.currSpell = 3;
+                    break;
+            }
+            
         }
     }
 }

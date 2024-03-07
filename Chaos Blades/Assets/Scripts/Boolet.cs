@@ -40,6 +40,7 @@ public class Boolet : MonoBehaviour
                 break;
         }
         Debug.Log("i need more bulletsssssss" + healthMultiplier);
+        Destroy(this.gameObject,5f);
     }
 
 

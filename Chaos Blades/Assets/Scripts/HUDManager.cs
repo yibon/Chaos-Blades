@@ -26,7 +26,7 @@ public class HUDManager : MonoBehaviour
     void Update()
     {
         kinghp_text.text = "King's HP: " + _king.hp;
-        playerMana_text.text = "Player's Mana: " + _player.currMana;
+        playerMana_text.text = "Player's Mana: " + Mathf.FloorToInt(_player.currMana);
 
         attackCD_text.text = "Attack CD: " + (int)(_player.attackSpellCooldownList[_player.attackSpellIndex]);
         defCD_text.text = "Defence CD: " + (int)(_player.proteccSpellCooldownList[_player.protectionSpellIndex]);
