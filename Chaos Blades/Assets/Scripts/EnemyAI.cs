@@ -12,6 +12,8 @@ public class EnemyAI : MonoBehaviour
     [SerializeField] float range;
     [SerializeField] int scoreAwardedOnDeath;
 
+    [HideInInspector] public bool enemyIsHit = false;
+
     public float force;
 
     public Rigidbody2D rb2D;
@@ -21,7 +23,6 @@ public class EnemyAI : MonoBehaviour
     public bool isHit = false;
 
     public Animator animator;
-
 
     //spawn bullet
     public GameObject EnemyBulletPrefab;
@@ -56,6 +57,12 @@ public class EnemyAI : MonoBehaviour
                 protectedSprite.SetActive(false);
                 isProtected = false;
             }
+        }
+
+        if (enemyIsHit == true)
+        {
+            StartCoroutine("HitFlash", this.gameObject);
+            enemyIsHit= false;
         }
 
         //destory if 0 hp
@@ -154,6 +161,7 @@ public class EnemyAI : MonoBehaviour
         if (!king.GetComponentInChildren<KingAI>().kingProtected)
         {
             king.GetComponentInChildren<KingAI>().hp -= attack;
+            king.gameObject.GetComponent<KingAI>().kingIsHit = true;
         }
     }
 
@@ -177,5 +185,15 @@ public class EnemyAI : MonoBehaviour
     IEnumerator Cooldowntimer(float time)
     {
         yield return new WaitForSeconds(time);
+    }
+
+    //flashing red
+    public IEnumerator HitFlash(GameObject go)
+    {
+        Color originalColour = go.GetComponentInChildren<SpriteRenderer>().color;
+        go.GetComponentInChildren<SpriteRenderer>().color = Color.red;
+        yield return new WaitForSeconds(0.1f);
+        go.GetComponentInChildren<SpriteRenderer>().color = originalColour;
+        StopCoroutine("EnemyFlash");
     }
 }

@@ -1,4 +1,6 @@
 
+using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class KingAI : MonoBehaviour
@@ -8,6 +10,8 @@ public class KingAI : MonoBehaviour
     [SerializeField] public float attack;
     [SerializeField] float attackSpeed;
     [SerializeField] float range;
+
+    [HideInInspector]public bool kingIsHit = false;
 
     public Rigidbody2D rb2D;
     public Collider2D attackCollider2D;
@@ -36,6 +40,14 @@ public class KingAI : MonoBehaviour
                 kingProtected = false;
             }
         }
+
+        //if king is hit
+        if (kingIsHit ==  true) 
+        {
+            StartCoroutine("HitFlash", this.gameObject);
+            kingIsHit= false;
+        }
+
 
         //constantly attacking
 
@@ -77,9 +89,20 @@ public class KingAI : MonoBehaviour
             if (!collision.gameObject.GetComponent<EnemyAI>().isProtected)
             {
                 collision.gameObject.GetComponent<EnemyAI>().hp -= attack;
+                collision.gameObject.GetComponent<EnemyAI>().enemyIsHit = true;
                 //Debug.Log("ouch");
             }
         }
         
+    }
+
+    //flashing red
+    public IEnumerator HitFlash(GameObject go)
+    {
+        Color originalColour = go.GetComponentInChildren<SpriteRenderer>().color;
+        go.GetComponentInChildren<SpriteRenderer>().color = Color.red; 
+        yield return new WaitForSeconds(0.1f);
+        go.GetComponentInChildren<SpriteRenderer>().color= originalColour;
+        StopCoroutine("EnemyFlash");
     }
 }

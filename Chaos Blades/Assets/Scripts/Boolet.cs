@@ -1,4 +1,5 @@
 
+using System.Collections;
 using UnityEngine;
 
 public class Boolet : MonoBehaviour
@@ -83,6 +84,11 @@ public class Boolet : MonoBehaviour
                 healthMultiplier = 0;
             }
 
+            if (healthMultiplier < 0)
+            {
+                _enemy.enemyIsHit = true;
+            }
+
             _enemy.hp = _enemy.hp + (healthMultiplier * bulletAmt);
             Debug.Log("Enemy Helf: " + _enemy.hp);
             Destroy(this.gameObject);
@@ -104,8 +110,15 @@ public class Boolet : MonoBehaviour
             }
 
             _king.hp = _king.hp + (healthMultiplier * bulletAmt);
-            Debug.Log("Enemy Helf: " + _king.hp);
+
+            if (healthMultiplier < 0)
+            {
+                _king.kingIsHit = true;
+            }
+            Debug.Log("King Helf: " + _king.hp);
             Destroy(this.gameObject);
         }
     }
+   
 }
+

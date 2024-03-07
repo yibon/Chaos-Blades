@@ -373,6 +373,7 @@ MonoBehaviour:
   attack: 0.3
   attackSpeed: 1
   range: 1
+  kingIsHit: 0
   rb2D: {fileID: 390728912}
   attackCollider2D: {fileID: 830378431}
   kingProtected: 0
