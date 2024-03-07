@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
+
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -36,12 +36,10 @@ public class PlayerMovement : MonoBehaviour
     float spellChargeTimer = 0;
     public Image barImage;
 
-    [Header("SHOOTING")] 
-    // Singleton this? 
-    public Transform firePoint;
-    public float bulletForce = 20f;
-    public GameObject[] attBulletPF;
-    public GameObject[] defBulletPF;
+    //[Header("SHOOTING")] 
+    //// Singleton this? 
+    //public Transform firePoint;
+    //public float bulletForce = 20f;
     private void Awake()
     {
         attackSpellCooldownList.Add(attackSpell1CD);
@@ -138,35 +136,48 @@ public class PlayerMovement : MonoBehaviour
             {
                 spellChargeTimer += Time.deltaTime;
                 barImage.fillAmount = spellChargeTimer / 3;
-                
+
+                //Shooting.canFire = true;
                 castingProtecc = true;
                 Debug.Log("protecc Holding");
             }
             else if (Input.GetMouseButtonUp(1))
             {
+                Shooting.canProtect = true;
                 //setting CD
                 proteccSpellCooldownList[proteccIndex] = SpellManager.instance.proteccSpells[proteccIndex].cooldown;
                 if (spellChargeTimer >= 0 && spellChargeTimer <= 1) //if timer more than 0 and less than equal 1, basic (Smol) charge
                 {
-                    Shoot(1, proteccIndex);
+                    //Shooting.attOrDef = 1;
+                    Shooting.spellIndex = proteccIndex;
+
+                    //Shoot(1, proteccIndex);
                     Debug.Log("Smol " + SpellManager.instance.proteccSpells[proteccIndex].Name); //replace with instantiation code
+                    //Shooting.canProtect = false;
                 }
                 else if (spellChargeTimer > 1 && spellChargeTimer <= 2) //if timer more than 1 and less than equal 2, med charge
                 {
-                    Shoot(1, proteccIndex);
+                    //Shooting.attOrDef = 1;
+                    Shooting.spellIndex = proteccIndex;
+                    //Shoot(1, proteccIndex);
                     Debug.Log("Med " + SpellManager.instance.proteccSpells[proteccIndex].Name); //replace with instantiation code
                     proteccSpellCooldownList[proteccIndex] += 1;
                     ManaCost += 1;
+                    //Shooting.canProtect = false;
                 }
                 else // timer more than 2, beeg charge
                 {
-                    Shoot(1, proteccIndex);
+                    //Shooting.attOrDef = 1;
+                    Shooting.spellIndex = proteccIndex;
+                    //Shoot(1, proteccIndex);
                     Debug.Log("Beeg " + SpellManager.instance.proteccSpells[proteccIndex].Name); //replace with instantiation code
                     proteccSpellCooldownList[proteccIndex] += 2;
                     ManaCost += 2;
+                    //Shooting.canProtect = false;
                 }
                 spellChargeTimer = 0;
                 castingProtecc = false;
+                //Shooting.canProtect = false;
                 currMana -= ManaCost;
                 Debug.Log(SpellManager.instance.proteccSpells[proteccIndex].Name + " casted, left Mana: " + currMana);
                 
@@ -212,12 +223,16 @@ public class PlayerMovement : MonoBehaviour
             {
                 //setting cooldown
                 attackSpellCooldownList[attackIndex] = SpellManager.instance.attackSpells[attackIndex].cooldown;
+                Shooting.canAttack = true;
                 
                 //if timer more than 0 and less than equal 1, basic (Smol) charge
                 if (spellChargeTimer >= 0 && spellChargeTimer < 1) 
                 {
                     //replace with instantiation code
-                    Shoot(0, attackIndex);
+                    //Shooting.canAttack = false;
+                    //Shooting.attOrDef = 0;
+                    Shooting.spellIndex = attackIndex;
+                    //Shoot(0, attackIndex);
                     Debug.Log("Smol " + SpellManager.instance.attackSpells[attackIndex].Name); 
                 }
                 
@@ -226,7 +241,10 @@ public class PlayerMovement : MonoBehaviour
                 {
                     //replace with instantiation code
                     Debug.Log("Med " + SpellManager.instance.attackSpells[attackIndex].Name);
-                    Shoot(0, attackIndex);
+                    //Shooting.canFire = false;
+                    //Shooting.attOrDef = 0;
+                    Shooting.spellIndex = attackIndex;
+                    //Shoot(0, attackIndex);
                     attackSpellCooldownList[attackIndex] += 1;
                     ManaCost += 1;
                 }
@@ -234,12 +252,19 @@ public class PlayerMovement : MonoBehaviour
                 {
                     //replace with instantiation code
                     Debug.Log("Beeg " + SpellManager.instance.attackSpells[attackIndex].Name);
-                    Shoot(0, attackIndex);
+
+                    //Shooting.canFire = false;
+                    //Shooting.attOrDef = 0;
+                    Shooting.spellIndex = attackIndex;
+
+                    //Shoot(0, attackIndex);
                     attackSpellCooldownList[attackIndex] += 2;
                     ManaCost += 2;
                 }
                 spellChargeTimer = 0;
                 castingAttack = false;
+
+                //Shooting.canAttack = false;
                 currMana -= ManaCost;
                 Debug.Log(SpellManager.instance.attackSpells[attackIndex].Name + " casted, left Mana: " + currMana);
             }
@@ -270,56 +295,5 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    // SHOOTING 
-    //               0- attack, 1- defence
-    public void Shoot(int attOrDef, int spellIndex)
-    {
-        if (attOrDef == 0)
-        {
-            //spawn bullet as attack spell
-            GameObject bullet = Instantiate(attBulletPF[spellIndex], firePoint.position, firePoint.rotation);
-            
-            //set attackspell bullet rb and launch it
-            Rigidbody2D bullet_rb = bullet.GetComponent<Rigidbody2D>();
-            bullet_rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
-            
-            //setting the bullet script
-            Boolet _boolet = bullet.GetComponent<Boolet>();
-            
-            //checking which spell
-            switch (spellIndex)
-            {
-                case 0:
-                    _boolet.currSpell = 0;
-                    break;
-                case 1:
-                    _boolet.currSpell = 1;
-                    break;
-            }
-        }
-        else if(attOrDef == 1) 
-        {
-            //spawn bullet as def spell
-            GameObject bullet = Instantiate(defBulletPF[spellIndex], firePoint.position, firePoint.rotation);
-            
-            //set defspell bullet rb and launch it
-            Rigidbody2D bullet_rb = bullet.GetComponent<Rigidbody2D>();
-            bullet_rb.AddForce(firePoint.up * bulletForce, ForceMode2D.Impulse);
-            
-            //setting the bullet script
-            Boolet _boolet = bullet.GetComponent<Boolet>();
-            
-            //checking which spell
-            switch (spellIndex)
-            {
-                case 0:
-                    _boolet.currSpell = 2;
-                    break;
-                case 1:
-                    _boolet.currSpell = 3;
-                    break;
-            }
-            
-        }
-    }
+    // 
 }

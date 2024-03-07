@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
-using UnityEngine.SceneManagement;
-using UnityEngine.UIElements;
 
 public class KingAI : MonoBehaviour
 {
@@ -14,6 +11,11 @@ public class KingAI : MonoBehaviour
 
     public Rigidbody2D rb2D;
     public Collider2D attackCollider2D;
+
+    public bool kingProtected;
+    public GameObject protectedSprite;
+
+    float protectionTimer;
     
     // Start is called before the first frame update
     void Start()
@@ -23,6 +25,18 @@ public class KingAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (kingProtected)
+        {
+            protectedSprite.SetActive(true);
+            protectionTimer += Time.deltaTime;
+            if (protectionTimer > 3)
+            {
+                protectionTimer = 0;
+                protectedSprite.SetActive(false);
+                kingProtected = false;
+            }
+        }
+
         //constantly attacking
 
         //constantly looking for enemy
@@ -60,8 +74,11 @@ public class KingAI : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag ("Enemy Support"))
         {
-            collision.gameObject.GetComponent<EnemyAI>().hp -= attack;
-            //Debug.Log("ouch");
+            if (!collision.gameObject.GetComponent<EnemyAI>().isProtected)
+            {
+                collision.gameObject.GetComponent<EnemyAI>().hp -= attack;
+                //Debug.Log("ouch");
+            }
         }
         
     }

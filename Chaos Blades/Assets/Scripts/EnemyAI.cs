@@ -1,4 +1,4 @@
-using System;
+
 using System.Collections;
 using UnityEngine;
 
@@ -22,13 +22,19 @@ public class EnemyAI : MonoBehaviour
 
     public Animator animator;
 
+
     //spawn bullet
     public GameObject EnemyBulletPrefab;
     public Transform firePoint;
     float nextAttackTime;
 
     GameObject king;
+    public GameObject protectedSprite;
     public GameObject[] nonSupportEnemies;
+    
+    
+    public bool isProtected;
+    float protectionTimer;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +46,18 @@ public class EnemyAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (isProtected)
+        {
+            protectedSprite.SetActive(true);
+            protectionTimer += Time.deltaTime;
+            if (protectionTimer > 3)
+            {
+                protectionTimer = 0;
+                protectedSprite.SetActive(false);
+                isProtected = false;
+            }
+        }
+
         //destory if 0 hp
         if (hp <= 0)
         {
@@ -61,7 +79,7 @@ public class EnemyAI : MonoBehaviour
             else
             {
                 //if enemy ranged
-                if (range > 1)
+                if (range > 2)
                 {
                     if (nextAttackTime < Time.time)
                     {
@@ -133,7 +151,10 @@ public class EnemyAI : MonoBehaviour
 
     void Attack() //used when in range of king
     {
-        king.GetComponentInChildren<KingAI>().hp -= attack;
+        if (!king.GetComponentInChildren<KingAI>().kingProtected)
+        {
+            king.GetComponentInChildren<KingAI>().hp -= attack;
+        }
     }
 
     void SupportBuff() //special class used for support enemy

@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -28,8 +27,8 @@ public class HUDManager : MonoBehaviour
         kinghp_text.text = "King's HP: " + _king.hp;
         playerMana_text.text = "Player's Mana: " + Mathf.FloorToInt(_player.currMana);
 
-        attackCD_text.text = "Attack CD: " + (int)(_player.attackSpellCooldownList[_player.attackSpellIndex]);
-        defCD_text.text = "Defence CD: " + (int)(_player.proteccSpellCooldownList[_player.protectionSpellIndex]);
+        attackCD_text.text = "Attack CD: " + _player.attackSpellCooldownList[_player.attackSpellIndex].ToString("#.00");
+        defCD_text.text = "Defence CD: " + _player.proteccSpellCooldownList[_player.protectionSpellIndex].ToString("#.00");
 
         switch (_player.attackSpellIndex)
         {

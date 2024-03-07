@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
-using UnityEngine.Rendering;
-using static UnityEngine.GraphicsBuffer;
 
 public class EnemyBulletScript : MonoBehaviour
 {
@@ -34,8 +31,10 @@ public class EnemyBulletScript : MonoBehaviour
         {
             //damage to king
             KingAI _king = collision.gameObject.GetComponentInParent<KingAI>();
-            _king.hp = _king.hp - attack;
-
+            if (!_king.kingProtected)
+            {
+                _king.hp = _king.hp - attack;
+            }
             //destroy after hitting king
             Destroy(this.gameObject);
         }

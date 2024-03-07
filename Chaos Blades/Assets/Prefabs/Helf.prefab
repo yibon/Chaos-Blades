@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currSpell: 0
+  force: 20
 --- !u!212 &4917980076697372048
 SpriteRenderer:
   m_ObjectHideFlags: 0
