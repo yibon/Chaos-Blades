@@ -72,7 +72,7 @@ public class Boolet : MonoBehaviour
     {
         //Debug.Log("knock knock who's there" +  collision.gameObject.tag);
         // * note need to use GetComponentInParent() * // 
-        if (collision.transform.root.CompareTag("Enemy") || collision.transform.root.CompareTag("EnemySupport"))
+        if (collision.transform.root.CompareTag("Enemy") || collision.transform.root.CompareTag("Enemy Support"))
         {
             EnemyAI _enemy = collision.gameObject.GetComponentInParent<EnemyAI>();
             if (currSpell == 3)
