@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currSpell: 0
+  VFX: {fileID: 2958803202934794785, guid: 0843bb1f52bf4264690a325f1487575b, type: 3}
   force: 20
 --- !u!50 &1705427531247767224
 Rigidbody2D:

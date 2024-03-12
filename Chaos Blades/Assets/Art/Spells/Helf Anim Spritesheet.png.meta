@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 053d310ab334d6b4ca34a51562adc142
+guid: 3644135b2eb6fc048bd24a9469373ee7
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,274 +117,232 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet 1_0
+      name: Helf Anim Spritesheet_0
       rect:
         serializedVersion: 2
-        x: 261
-        y: 3426
-        width: 235
-        height: 318
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 0
+        y: 3200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 456eb4b45958da440baef555ce2bc615
-      internalID: 1129491877
+      spriteID: 3566a82239532da43b9d08b52b20b240
+      internalID: 373694473
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet 1_1
+      name: Helf Anim Spritesheet_1
       rect:
         serializedVersion: 2
-        x: 1062
-        y: 3426
-        width: 246
-        height: 340
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 800
+        y: 3200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdc62c4571929dd4487e6a85c2462323
-      internalID: 12053779
+      spriteID: fb7b01a9993559b4b97e841da7090a85
+      internalID: 782796831
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet 1_2
+      name: Helf Anim Spritesheet_2
       rect:
         serializedVersion: 2
-        x: 1864
-        y: 3426
-        width: 226
-        height: 343
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 1600
+        y: 3200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba5abc1a9bea35f4fb0482d7ccd86ddb
-      internalID: -1371073823
+      spriteID: 52ae5eafa08db5d40840ffe97a41f798
+      internalID: -86966140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet 1_3
+      name: Helf Anim Spritesheet_3
       rect:
         serializedVersion: 2
-        x: 2662
-        y: 3426
-        width: 262
-        height: 346
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 2400
+        y: 3200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b7c17e4c0dd8804a898f0229160d930
-      internalID: 903199690
+      spriteID: d2b56a2f913ea434f9e36c0578408bd6
+      internalID: -372647228
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet 1_4
+      name: Helf Anim Spritesheet_4
       rect:
         serializedVersion: 2
-        x: 3460
-        y: 3426
-        width: 279
-        height: 348
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 3200
+        y: 3200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78aca36c65a4aa54aaee80bf2738f5e4
-      internalID: -959425195
+      spriteID: 7f1ed76aefa61f14b86322d79741491a
+      internalID: -1058397109
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet 1_5
+      name: Helf Anim Spritesheet_5
       rect:
         serializedVersion: 2
-        x: 4264
-        y: 3426
-        width: 262
-        height: 346
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 4000
+        y: 3200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7be055240ca3c5a4392b8a1dbdf2799f
-      internalID: 941773879
+      spriteID: ddc553844d82cfc46bac88f66196bce3
+      internalID: 1760025637
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet 1_6
+      name: Helf Anim Spritesheet_6
       rect:
         serializedVersion: 2
-        x: 5060
-        y: 3426
-        width: 279
-        height: 348
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 0
+        y: 2400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 049cced653efece4fa8e7d6cb7db16e6
-      internalID: 100227645
+      spriteID: 7927482532043974481e254ddddc1d6d
+      internalID: -1403680991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet 1_7
+      name: Helf Anim Spritesheet_7
       rect:
         serializedVersion: 2
-        x: 264
-        y: 2626
-        width: 262
-        height: 345
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 800
+        y: 2400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4ad43a4d2debed4dab843316891cd66
-      internalID: 142120716
+      spriteID: 455e0308e05d8164cb156692cb0499d3
+      internalID: 2030743770
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet 1_8
+      name: Helf Anim Spritesheet_8
       rect:
         serializedVersion: 2
-        x: 1060
-        y: 2626
-        width: 278
-        height: 347
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 1600
+        y: 2400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed29fde8d3f789e4e8405d19f540a8ea
-      internalID: -1936226654
+      spriteID: 3b9c85b32be9b124386f59b809ee71f8
+      internalID: -138738710
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet 1_9
+      name: Helf Anim Spritesheet_9
       rect:
         serializedVersion: 2
-        x: 1864
-        y: 2626
-        width: 262
-        height: 345
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 2400
+        y: 2400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6ed1550c16437d47a2f4a3137e5dd60
-      internalID: 1017092803
+      spriteID: 4955fc37883171348a5c2d9757096d7d
+      internalID: -1776574767
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet 1_10
+      name: Helf Anim Spritesheet_10
       rect:
         serializedVersion: 2
-        x: 2663
-        y: 2626
-        width: 226
-        height: 342
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 3200
+        y: 2400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0dee828b955e7514a8c7795bf2f2b40a
-      internalID: 924299932
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet 1_11
-      rect:
-        serializedVersion: 2
-        x: 3463
-        y: 2626
-        width: 243
-        height: 342
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6364cce3b82f2804da8a4f57bb469e08
-      internalID: -928040361
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet 1_12
-      rect:
-        serializedVersion: 2
-        x: 4262
-        y: 2626
-        width: 232
-        height: 320
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a76bd4f9a3967b64682b69f45c782668
-      internalID: -1922833709
+      spriteID: 0a093da4a8979954a9b6c31e4c146682
+      internalID: -424069092
       vertices: []
       indices: 
       edges: []
@@ -400,19 +358,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Shaman Cast Anim Spritesheet 1_4: -959425195
-      Shaman Cast Anim Spritesheet 1_3: 903199690
-      Shaman Cast Anim Spritesheet 1_9: 1017092803
-      Shaman Cast Anim Spritesheet 1_5: 941773879
-      Shaman Cast Anim Spritesheet 1_12: -1922833709
-      Shaman Cast Anim Spritesheet 1_2: -1371073823
-      Shaman Cast Anim Spritesheet 1_6: 100227645
-      Shaman Cast Anim Spritesheet 1_1: 12053779
-      Shaman Cast Anim Spritesheet 1_11: -928040361
-      Shaman Cast Anim Spritesheet 1_10: 924299932
-      Shaman Cast Anim Spritesheet 1_8: -1936226654
-      Shaman Cast Anim Spritesheet 1_7: 142120716
-      Shaman Cast Anim Spritesheet 1_0: 1129491877
+      Helf Anim Spritesheet_7: 2030743770
+      Helf Anim Spritesheet_6: -1403680991
+      Helf Anim Spritesheet_5: 1760025637
+      Helf Anim Spritesheet_3: -372647228
+      Helf Anim Spritesheet_4: -1058397109
+      Helf Anim Spritesheet_0: 373694473
+      Helf Anim Spritesheet_1: 782796831
+      Helf Anim Spritesheet_10: -424069092
+      Helf Anim Spritesheet_9: -1776574767
+      Helf Anim Spritesheet_2: -86966140
+      Helf Anim Spritesheet_8: -138738710
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

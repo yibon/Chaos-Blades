@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 053d310ab334d6b4ca34a51562adc142
+guid: 0c8b66f48667a724b8f6e3bca6e81103
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,274 +117,232 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet 1_0
+      name: Damage Boost Anim Spritesheet_0
       rect:
         serializedVersion: 2
-        x: 261
-        y: 3426
-        width: 235
-        height: 318
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 0
+        y: 3200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 456eb4b45958da440baef555ce2bc615
-      internalID: 1129491877
+      spriteID: bdff598620aafdb4d86279b8097e6ba0
+      internalID: 976570612
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet 1_1
+      name: Damage Boost Anim Spritesheet_1
       rect:
         serializedVersion: 2
-        x: 1062
-        y: 3426
-        width: 246
-        height: 340
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 800
+        y: 3200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cdc62c4571929dd4487e6a85c2462323
-      internalID: 12053779
+      spriteID: feff5d2eed022234488e96e837bc8491
+      internalID: 405600586
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet 1_2
+      name: Damage Boost Anim Spritesheet_2
       rect:
         serializedVersion: 2
-        x: 1864
-        y: 3426
-        width: 226
-        height: 343
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 1600
+        y: 3200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba5abc1a9bea35f4fb0482d7ccd86ddb
-      internalID: -1371073823
+      spriteID: 63068bd20ef2a664bb62752a83139f27
+      internalID: -1903668767
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet 1_3
+      name: Damage Boost Anim Spritesheet_3
       rect:
         serializedVersion: 2
-        x: 2662
-        y: 3426
-        width: 262
-        height: 346
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 2400
+        y: 3200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9b7c17e4c0dd8804a898f0229160d930
-      internalID: 903199690
+      spriteID: 0f303f3ae94cfd54bb1fc36fbb58dce1
+      internalID: 823034802
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet 1_4
+      name: Damage Boost Anim Spritesheet_4
       rect:
         serializedVersion: 2
-        x: 3460
-        y: 3426
-        width: 279
-        height: 348
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 3200
+        y: 3200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 78aca36c65a4aa54aaee80bf2738f5e4
-      internalID: -959425195
+      spriteID: 289f24ece3379ba42b05affaa72e0f47
+      internalID: 328220116
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet 1_5
+      name: Damage Boost Anim Spritesheet_5
       rect:
         serializedVersion: 2
-        x: 4264
-        y: 3426
-        width: 262
-        height: 346
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 4000
+        y: 3200
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7be055240ca3c5a4392b8a1dbdf2799f
-      internalID: 941773879
+      spriteID: 1fbecf961f70db94aa343f799cbd7ae6
+      internalID: 154841655
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet 1_6
+      name: Damage Boost Anim Spritesheet_6
       rect:
         serializedVersion: 2
-        x: 5060
-        y: 3426
-        width: 279
-        height: 348
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 0
+        y: 2400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 049cced653efece4fa8e7d6cb7db16e6
-      internalID: 100227645
+      spriteID: 6b13a93781d732646a6e8ffa9fcc2711
+      internalID: -1424528047
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet 1_7
+      name: Damage Boost Anim Spritesheet_7
       rect:
         serializedVersion: 2
-        x: 264
-        y: 2626
-        width: 262
-        height: 345
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 800
+        y: 2400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e4ad43a4d2debed4dab843316891cd66
-      internalID: 142120716
+      spriteID: ee30173669c083548b3a22140216bc09
+      internalID: 1537493752
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet 1_8
+      name: Damage Boost Anim Spritesheet_8
       rect:
         serializedVersion: 2
-        x: 1060
-        y: 2626
-        width: 278
-        height: 347
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 1600
+        y: 2400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed29fde8d3f789e4e8405d19f540a8ea
-      internalID: -1936226654
+      spriteID: 7cf754c57edb8d942b5d24a33a60fc84
+      internalID: 73441861
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet 1_9
+      name: Damage Boost Anim Spritesheet_9
       rect:
         serializedVersion: 2
-        x: 1864
-        y: 2626
-        width: 262
-        height: 345
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 2400
+        y: 2400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b6ed1550c16437d47a2f4a3137e5dd60
-      internalID: 1017092803
+      spriteID: af4eca2a04f723f4c9427fe515a38e0d
+      internalID: 1127583887
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet 1_10
+      name: Damage Boost Anim Spritesheet_10
       rect:
         serializedVersion: 2
-        x: 2663
-        y: 2626
-        width: 226
-        height: 342
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
+        x: 3200
+        y: 2400
+        width: 800
+        height: 800
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0dee828b955e7514a8c7795bf2f2b40a
-      internalID: 924299932
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet 1_11
-      rect:
-        serializedVersion: 2
-        x: 3463
-        y: 2626
-        width: 243
-        height: 342
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6364cce3b82f2804da8a4f57bb469e08
-      internalID: -928040361
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet 1_12
-      rect:
-        serializedVersion: 2
-        x: 4262
-        y: 2626
-        width: 232
-        height: 320
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a76bd4f9a3967b64682b69f45c782668
-      internalID: -1922833709
+      spriteID: daaad1bb385d72045b19ad72d7ec6056
+      internalID: 623483510
       vertices: []
       indices: 
       edges: []
@@ -400,19 +358,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Shaman Cast Anim Spritesheet 1_4: -959425195
-      Shaman Cast Anim Spritesheet 1_3: 903199690
-      Shaman Cast Anim Spritesheet 1_9: 1017092803
-      Shaman Cast Anim Spritesheet 1_5: 941773879
-      Shaman Cast Anim Spritesheet 1_12: -1922833709
-      Shaman Cast Anim Spritesheet 1_2: -1371073823
-      Shaman Cast Anim Spritesheet 1_6: 100227645
-      Shaman Cast Anim Spritesheet 1_1: 12053779
-      Shaman Cast Anim Spritesheet 1_11: -928040361
-      Shaman Cast Anim Spritesheet 1_10: 924299932
-      Shaman Cast Anim Spritesheet 1_8: -1936226654
-      Shaman Cast Anim Spritesheet 1_7: 142120716
-      Shaman Cast Anim Spritesheet 1_0: 1129491877
+      Damage Boost Anim Spritesheet_10: 623483510
+      Damage Boost Anim Spritesheet_2: -1903668767
+      Damage Boost Anim Spritesheet_3: 823034802
+      Damage Boost Anim Spritesheet_9: 1127583887
+      Damage Boost Anim Spritesheet_5: 154841655
+      Damage Boost Anim Spritesheet_4: 328220116
+      Damage Boost Anim Spritesheet_1: 405600586
+      Damage Boost Anim Spritesheet_7: 1537493752
+      Damage Boost Anim Spritesheet_8: 73441861
+      Damage Boost Anim Spritesheet_0: 976570612
+      Damage Boost Anim Spritesheet_6: -1424528047
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -18,6 +18,8 @@ public class Boolet : MonoBehaviour
     Vector3 mousePos;
     Camera mainCam;
 
+    public GameObject VFX;
+
     private Rigidbody2D rb;
     public float force;
 
@@ -88,10 +90,17 @@ public class Boolet : MonoBehaviour
             if (healthMultiplier < 0)
             {
                 _enemy.enemyIsHit = true;
+                
             }
 
             _enemy.hp = _enemy.hp + (healthMultiplier * bulletAmt);
             Debug.Log("Enemy Helf: " + _enemy.hp);
+
+            if (VFX != null)
+            {
+                GameObject vfx = Instantiate(VFX, collision.transform.position, collision.transform.rotation);
+                Destroy(vfx, 1f);
+            }
             Destroy(this.gameObject);
             
         }
@@ -116,8 +125,13 @@ public class Boolet : MonoBehaviour
             }
 
             _king.hp = _king.hp + (healthMultiplier * bulletAmt);
-            
+
             Debug.Log("King Helf: " + _king.hp);
+            if (VFX != null)
+            {
+                GameObject vfx = Instantiate(VFX, collision.transform.position, collision.transform.rotation);
+                Destroy(vfx, 0.5f);
+            }
             Destroy(this.gameObject);
         }
     }

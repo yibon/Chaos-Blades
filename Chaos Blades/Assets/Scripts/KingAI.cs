@@ -104,6 +104,6 @@ public class KingAI : MonoBehaviour
         go.GetComponentInChildren<SpriteRenderer>().color = Color.red; 
         yield return new WaitForSeconds(0.1f);
         go.GetComponentInChildren<SpriteRenderer>().color = originalColour;
-        StopCoroutine("EnemyFlash");
+        StopCoroutine("HitFlash");
     }
 }

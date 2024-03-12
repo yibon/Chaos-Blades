@@ -48,6 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currSpell: 0
+  VFX: {fileID: 4939384632241935020, guid: 6236c35d4bb8136489ddf3252a480039, type: 3}
   force: 20
 --- !u!212 &4917980076697372048
 SpriteRenderer:
