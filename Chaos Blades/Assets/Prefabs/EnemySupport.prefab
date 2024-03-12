@@ -301,4 +301,5 @@ MonoBehaviour:
   firePoint: {fileID: 0}
   protectedSprite: {fileID: 1050758017202258501}
   nonSupportEnemies: []
+  supportEnemyVFX: {fileID: 3079766468254926634, guid: 3ed4af66560437240b8ee7a5431b41ab, type: 3}
   isProtected: 0
