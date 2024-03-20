@@ -1,6 +1,5 @@
 
 using System.Collections;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class KingAI : MonoBehaviour
@@ -111,7 +110,7 @@ public class KingAI : MonoBehaviour
         Color originalColour = go.GetComponentInChildren<SpriteRenderer>().color;
         go.GetComponentInChildren<SpriteRenderer>().color = Color.red; 
         yield return new WaitForSeconds(0.1f);
-        go.GetComponentInChildren<SpriteRenderer>().color= originalColour;
-        StopCoroutine("EnemyFlash");
+        go.GetComponentInChildren<SpriteRenderer>().color = originalColour;
+        StopCoroutine("HitFlash");
     }
 }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 980772008ef7977458d2bddab3751795
+guid: 053d310ab334d6b4ca34a51562adc142
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -117,13 +117,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet_0
+      name: Shaman Cast Anim Spritesheet 1_0
       rect:
         serializedVersion: 2
-        x: 279
-        y: 3429
-        width: 230
-        height: 317
+        x: 261
+        y: 3426
+        width: 235
+        height: 318
       alignment: 9
       pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -131,20 +131,230 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7b91607421fcf4b4598d2be479cfd4c6
-      internalID: -1729135801
+      spriteID: 456eb4b45958da440baef555ce2bc615
+      internalID: 1129491877
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet_1
+      name: Shaman Cast Anim Spritesheet 1_1
       rect:
         serializedVersion: 2
-        x: 1080
-        y: 3429
+        x: 1062
+        y: 3426
+        width: 246
+        height: 340
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdc62c4571929dd4487e6a85c2462323
+      internalID: 12053779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shaman Cast Anim Spritesheet 1_2
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 3426
+        width: 226
+        height: 343
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba5abc1a9bea35f4fb0482d7ccd86ddb
+      internalID: -1371073823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shaman Cast Anim Spritesheet 1_3
+      rect:
+        serializedVersion: 2
+        x: 2662
+        y: 3426
+        width: 262
+        height: 346
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b7c17e4c0dd8804a898f0229160d930
+      internalID: 903199690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shaman Cast Anim Spritesheet 1_4
+      rect:
+        serializedVersion: 2
+        x: 3460
+        y: 3426
+        width: 279
+        height: 348
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78aca36c65a4aa54aaee80bf2738f5e4
+      internalID: -959425195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shaman Cast Anim Spritesheet 1_5
+      rect:
+        serializedVersion: 2
+        x: 4264
+        y: 3426
+        width: 262
+        height: 346
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be055240ca3c5a4392b8a1dbdf2799f
+      internalID: 941773879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shaman Cast Anim Spritesheet 1_6
+      rect:
+        serializedVersion: 2
+        x: 5060
+        y: 3426
+        width: 279
+        height: 348
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 049cced653efece4fa8e7d6cb7db16e6
+      internalID: 100227645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shaman Cast Anim Spritesheet 1_7
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 2626
+        width: 262
+        height: 345
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4ad43a4d2debed4dab843316891cd66
+      internalID: 142120716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shaman Cast Anim Spritesheet 1_8
+      rect:
+        serializedVersion: 2
+        x: 1060
+        y: 2626
+        width: 278
+        height: 347
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed29fde8d3f789e4e8405d19f540a8ea
+      internalID: -1936226654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shaman Cast Anim Spritesheet 1_9
+      rect:
+        serializedVersion: 2
+        x: 1864
+        y: 2626
+        width: 262
+        height: 345
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6ed1550c16437d47a2f4a3137e5dd60
+      internalID: 1017092803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shaman Cast Anim Spritesheet 1_10
+      rect:
+        serializedVersion: 2
+        x: 2663
+        y: 2626
+        width: 226
+        height: 342
+      alignment: 9
+      pivot: {x: 0.5, y: 0.1}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dee828b955e7514a8c7795bf2f2b40a
+      internalID: 924299932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shaman Cast Anim Spritesheet 1_11
+      rect:
+        serializedVersion: 2
+        x: 3463
+        y: 2626
         width: 243
-        height: 339
+        height: 342
       alignment: 9
       pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -152,20 +362,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 900886f9011f47f43b1dd65824c93e94
-      internalID: 506057768
+      spriteID: 6364cce3b82f2804da8a4f57bb469e08
+      internalID: -928040361
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet_2
+      name: Shaman Cast Anim Spritesheet 1_12
       rect:
         serializedVersion: 2
-        x: 1881
-        y: 3429
-        width: 222
-        height: 341
+        x: 4262
+        y: 2626
+        width: 232
+        height: 320
       alignment: 9
       pivot: {x: 0.5, y: 0.1}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,218 +383,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 134354a7a3e471448924e21683f9b87e
-      internalID: 518083743
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 2680
-        y: 3429
-        width: 221
-        height: 339
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 711cfde5e134d8843a50d04e89ea2a33
-      internalID: -1102998670
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet_4
-      rect:
-        serializedVersion: 2
-        x: 3478
-        y: 3429
-        width: 235
-        height: 341
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d315f1796f970e04eb4f4faf416923a7
-      internalID: 309881709
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet_5
-      rect:
-        serializedVersion: 2
-        x: 4279
-        y: 3429
-        width: 222
-        height: 339
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b771dfd2612691e42872594b6a59e952
-      internalID: 1115414925
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet_6
-      rect:
-        serializedVersion: 2
-        x: 5078
-        y: 3429
-        width: 235
-        height: 341
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bf08c2097ed2fbc48b2568a64ff61b34
-      internalID: 1173354676
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet_7
-      rect:
-        serializedVersion: 2
-        x: 282
-        y: 2630
-        width: 218
-        height: 339
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 70ee54acb0dfc2b439c7bdbbceb56996
-      internalID: 524878923
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet_8
-      rect:
-        serializedVersion: 2
-        x: 1077
-        y: 2630
-        width: 236
-        height: 339
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36c8ab86eeeb4604f8b0535e7ce84126
-      internalID: 1719235413
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet_9
-      rect:
-        serializedVersion: 2
-        x: 1881
-        y: 2630
-        width: 219
-        height: 339
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e9036a8a2a8bd7e4283cbfa81a25ef93
-      internalID: -1503953537
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet_10
-      rect:
-        serializedVersion: 2
-        x: 2680
-        y: 2630
-        width: 224
-        height: 339
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e8f133808ef62d4479c0442dc2784a9e
-      internalID: -2037215439
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet_11
-      rect:
-        serializedVersion: 2
-        x: 3481
-        y: 2630
-        width: 240
-        height: 339
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6cb893f219adb25488a6a6b846722297
-      internalID: 1520286395
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Shaman Cast Anim Spritesheet_12
-      rect:
-        serializedVersion: 2
-        x: 4279
-        y: 2630
-        width: 230
-        height: 317
-      alignment: 9
-      pivot: {x: 0.5, y: 0.1}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e0d4b5c2cbfa1a14cb5d5fd7b6b39932
-      internalID: -2043822515
+      spriteID: a76bd4f9a3967b64682b69f45c782668
+      internalID: -1922833709
       vertices: []
       indices: 
       edges: []
@@ -400,19 +400,19 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Shaman Cast Anim Spritesheet_11: 1520286395
-      Shaman Cast Anim Spritesheet_9: -1503953537
-      Shaman Cast Anim Spritesheet_4: 309881709
-      Shaman Cast Anim Spritesheet_0: -1729135801
-      Shaman Cast Anim Spritesheet_12: -2043822515
-      Shaman Cast Anim Spritesheet_5: 1115414925
-      Shaman Cast Anim Spritesheet_1: 506057768
-      Shaman Cast Anim Spritesheet_10: -2037215439
-      Shaman Cast Anim Spritesheet_2: 518083743
-      Shaman Cast Anim Spritesheet_8: 1719235413
-      Shaman Cast Anim Spritesheet_3: -1102998670
-      Shaman Cast Anim Spritesheet_7: 524878923
-      Shaman Cast Anim Spritesheet_6: 1173354676
+      Shaman Cast Anim Spritesheet 1_4: -959425195
+      Shaman Cast Anim Spritesheet 1_3: 903199690
+      Shaman Cast Anim Spritesheet 1_9: 1017092803
+      Shaman Cast Anim Spritesheet 1_5: 941773879
+      Shaman Cast Anim Spritesheet 1_12: -1922833709
+      Shaman Cast Anim Spritesheet 1_2: -1371073823
+      Shaman Cast Anim Spritesheet 1_6: 100227645
+      Shaman Cast Anim Spritesheet 1_1: 12053779
+      Shaman Cast Anim Spritesheet 1_11: -928040361
+      Shaman Cast Anim Spritesheet 1_10: 924299932
+      Shaman Cast Anim Spritesheet 1_8: -1936226654
+      Shaman Cast Anim Spritesheet 1_7: 142120716
+      Shaman Cast Anim Spritesheet 1_0: 1129491877
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

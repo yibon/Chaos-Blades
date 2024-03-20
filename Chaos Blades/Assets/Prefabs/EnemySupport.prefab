@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 5250602284631087550}
   m_Layer: 0
   m_Name: EnemySupport Sprite
-  m_TagString: Untagged
+  m_TagString: Enemy Support
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,12 +159,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1729135801, guid: 980772008ef7977458d2bddab3751795, type: 3}
+  m_Sprite: {fileID: 1129491877, guid: 053d310ab334d6b4ca34a51562adc142, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.3000002, y: 3.17031}
+  m_Size: {x: 2.3500001, y: 3.1803107}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -187,8 +187,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.1}
-    oldSize: {x: 2.3000002, y: 3.17031}
-    newSize: {x: 2.3000002, y: 3.17031}
+    oldSize: {x: 2.3500001, y: 3.1803107}
+    newSize: {x: 2.3500001, y: 3.1803107}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -291,6 +291,7 @@ MonoBehaviour:
   attackSpeed: 1.4
   range: 5
   scoreAwardedOnDeath: 1
+  enemyIsHit: 0
   force: 0
   rb2D: {fileID: 5250602285302975545}
   c2D: {fileID: 0}
@@ -300,4 +301,5 @@ MonoBehaviour:
   firePoint: {fileID: 0}
   protectedSprite: {fileID: 1050758017202258501}
   nonSupportEnemies: []
+  supportEnemyVFX: {fileID: 3079766468254926634, guid: 3ed4af66560437240b8ee7a5431b41ab, type: 3}
   isProtected: 0

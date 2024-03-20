@@ -1,5 +1,6 @@
 
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Boolet : MonoBehaviour
@@ -16,6 +17,8 @@ public class Boolet : MonoBehaviour
 
     Vector3 mousePos;
     Camera mainCam;
+
+    public GameObject VFX;
 
     private Rigidbody2D rb;
     public float force;
@@ -71,7 +74,7 @@ public class Boolet : MonoBehaviour
     {
         //Debug.Log("knock knock who's there" +  collision.gameObject.tag);
         // * note need to use GetComponentInParent() * // 
-        if (collision.transform.root.CompareTag("Enemy"))
+        if (collision.transform.root.CompareTag("Enemy") || collision.transform.root.CompareTag("Enemy Support"))
         {
             EnemyAI _enemy = collision.gameObject.GetComponentInParent<EnemyAI>();
             if (currSpell == 3)
@@ -87,10 +90,17 @@ public class Boolet : MonoBehaviour
             if (healthMultiplier < 0)
             {
                 _enemy.enemyIsHit = true;
+                
             }
 
             _enemy.hp = _enemy.hp + (healthMultiplier * bulletAmt);
             Debug.Log("Enemy Helf: " + _enemy.hp);
+
+            if (VFX != null)
+            {
+                GameObject vfx = Instantiate(VFX, collision.transform.position, collision.transform.rotation);
+                Destroy(vfx, 1f);
+            }
             Destroy(this.gameObject);
             
         }
@@ -109,13 +119,19 @@ public class Boolet : MonoBehaviour
                 healthMultiplier = 0;
             }
 
-            _king.hp = _king.hp + (healthMultiplier * bulletAmt);
-
             if (healthMultiplier < 0)
             {
                 _king.kingIsHit = true;
             }
+
+            _king.hp = _king.hp + (healthMultiplier * bulletAmt);
+
             Debug.Log("King Helf: " + _king.hp);
+            if (VFX != null)
+            {
+                GameObject vfx = Instantiate(VFX, collision.transform.position, collision.transform.rotation);
+                Destroy(vfx, 0.5f);
+            }
             Destroy(this.gameObject);
         }
     }

@@ -1,6 +1,7 @@
 
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SubsystemsImplementation;
 
 public class EnemyAI : MonoBehaviour
 {
@@ -32,6 +33,7 @@ public class EnemyAI : MonoBehaviour
     GameObject king;
     public GameObject protectedSprite;
     public GameObject[] nonSupportEnemies;
+    public GameObject supportEnemyVFX;
     
     
     public bool isProtected;
@@ -170,6 +172,9 @@ public class EnemyAI : MonoBehaviour
         animator.Play("Shaman_Cast");
         nonSupportEnemies[0].GetComponent<EnemyAI>().attack += 1;
 
+        GameObject vfx = Instantiate(supportEnemyVFX, nonSupportEnemies[0].transform.position, nonSupportEnemies[0].transform.rotation);
+        Destroy(vfx,attackSpeed);
+
         nextAttackTime = Time.time + attackSpeed;
     }
     
@@ -194,6 +199,6 @@ public class EnemyAI : MonoBehaviour
         go.GetComponentInChildren<SpriteRenderer>().color = Color.red;
         yield return new WaitForSeconds(0.1f);
         go.GetComponentInChildren<SpriteRenderer>().color = originalColour;
-        StopCoroutine("EnemyFlash");
+        StopCoroutine("HitFlash");
     }
 }
