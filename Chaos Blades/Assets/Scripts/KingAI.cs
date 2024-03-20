@@ -20,6 +20,7 @@ public class KingAI : MonoBehaviour
     public GameObject protectedSprite;
 
     float protectionTimer;
+    AudioManager _am;
     
     // Start is called before the first frame update
     void Start()
@@ -29,6 +30,14 @@ public class KingAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        hp = Mathf.Clamp(hp, 0, 100);
+
+        #region PLAYING SOUNDS
+
+
+
+        #endregion
+
         if (kingProtected)
         {
             protectedSprite.SetActive(true);
