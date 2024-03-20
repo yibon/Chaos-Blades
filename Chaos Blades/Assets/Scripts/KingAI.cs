@@ -32,7 +32,15 @@ public class KingAI : MonoBehaviour
         hp = Mathf.Clamp(hp, 0, 100);
 
         #region PLAYING SOUNDS
+        if (hp < 50)
+        {
+            FindObjectOfType<AudioManager>().Play("King50Health");
+        }
 
+        if (hp < 25)
+        {
+            AudioManager.instance.Play("King10Health");
+        }
 
 
         #endregion
@@ -50,8 +58,9 @@ public class KingAI : MonoBehaviour
         }
 
         //if king is hit
-        if (kingIsHit ==  true) 
+        if (kingIsHit ==  true)
         {
+            //AudioManager.instance.Play("KingHit");
             StartCoroutine("HitFlash", this.gameObject);
             kingIsHit= false;
         }

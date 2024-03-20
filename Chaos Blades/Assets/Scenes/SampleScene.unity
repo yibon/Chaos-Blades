@@ -3568,7 +3568,25 @@ MonoBehaviour:
   - name: DefendAnnoucnement
     clip: {fileID: 8300000, guid: b63a86dacea7661468966ec0f4616f25, type: 3}
     volume: 1
-    pitch: 0.3
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: KingHit
+    clip: {fileID: 8300000, guid: 341958e823e80a74e81313a888f622dc, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: King10Health
+    clip: {fileID: 8300000, guid: 39edaa2d48c4f5f4aa5ddf836db5c8c5, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: King50Health
+    clip: {fileID: 8300000, guid: cefa257b1cf9cb7408d99f46f503662f, type: 3}
+    volume: 1
+    pitch: 1
     loop: 0
     source: {fileID: 0}
 --- !u!4 &743504582
