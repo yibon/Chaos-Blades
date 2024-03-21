@@ -3490,6 +3490,54 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
+  - name: Golem1
+    clip: {fileID: 8300000, guid: 8f58975351c4b5e439f5cd64e733c861, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Golem2
+    clip: {fileID: 8300000, guid: e471ad87c17b3df4fbf59fe3f43340c7, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Golem3
+    clip: {fileID: 8300000, guid: 273bb0de2365b6242941aa6225d67884, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Golem4
+    clip: {fileID: 8300000, guid: 75c894d54a11e0a46a8b6dbec6911ee6, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Golem5
+    clip: {fileID: 8300000, guid: c735a4f9cfcba55428a6cc0f71d3dc9c, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Slime1
+    clip: {fileID: 8300000, guid: a3afa05f3f883d84399e21a7d4a32276, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Slime2
+    clip: {fileID: 8300000, guid: f5e030e2a0d61184fadc6fe0e136b269, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Slime3
+    clip: {fileID: 8300000, guid: 75542443d20559244aa417418197a6f0, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &743504582
 Transform:
   m_ObjectHideFlags: 0
