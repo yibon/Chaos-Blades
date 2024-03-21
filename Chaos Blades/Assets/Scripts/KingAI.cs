@@ -20,11 +20,6 @@ public class KingAI : MonoBehaviour
 
     float protectionTimer;
     AudioManager _am;
-    
-    // Start is called before the first frame update
-    void Start()
-    {
-    }
 
     // Update is called once per frame
     void Update()
@@ -32,15 +27,17 @@ public class KingAI : MonoBehaviour
         hp = Mathf.Clamp(hp, 0, 100);
 
         #region PLAYING SOUNDS
-        if (hp < 50)
-        {
-            FindObjectOfType<AudioManager>().Play("King50Health");
-        }
 
-        if (hp < 25)
-        {
-            AudioManager.instance.Play("King10Health");
-        }
+        //if (hp < 50)
+        //{
+        //    Debug.Log("ofawmofmwofmew");
+        //    AudioManager.instance.Play("King50Health");
+        //}
+
+        //if (hp < 25)
+        //{
+        //    AudioManager.instance.Play("King10Health");
+        //}
 
 
         #endregion
@@ -60,7 +57,7 @@ public class KingAI : MonoBehaviour
         //if king is hit
         if (kingIsHit ==  true)
         {
-            //AudioManager.instance.Play("KingHit");
+            AudioManager.instance.Play("KingHit");
             StartCoroutine("HitFlash", this.gameObject);
             kingIsHit= false;
         }

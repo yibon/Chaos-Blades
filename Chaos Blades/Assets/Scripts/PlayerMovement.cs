@@ -139,6 +139,18 @@ public class PlayerMovement : MonoBehaviour
             #region Checking Mouse press
             if (Input.GetMouseButton(1)) //healing with RMB
             {
+                #region Playing Sounds
+                if (proteccIndex == 0)
+                {
+                    AudioManager.instance.Play("HelfSFX");
+                }
+
+                else
+                {
+                    AudioManager.instance.Play("ShieldSFX");
+                }
+                #endregion
+
                 spellChargeTimer += Time.deltaTime;
                 barImage.fillAmount = spellChargeTimer / 3;
 
@@ -218,7 +230,19 @@ public class PlayerMovement : MonoBehaviour
                 //setting cooldown
                 attackSpellCooldownList[attackIndex] = SpellManager.instance.attackSpells[attackIndex].cooldown;
                 Shooting.canAttack = true;
-                
+
+                #region Playing Sounds
+                if (attackIndex == 0)
+                {
+                    AudioManager.instance.Play("PewPewSFX");
+                }
+
+                else
+                {
+                    AudioManager.instance.Play("BoomBoomSFX");
+                }
+                #endregion
+
                 //if timer more than 0 and less than equal 1, basic (Smol) charge
                 if (spellChargeTimer >= 0 && spellChargeTimer < 1) 
                 {
