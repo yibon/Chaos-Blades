@@ -79,6 +79,7 @@ public class Boolet : MonoBehaviour
             EnemyAI _enemy = collision.gameObject.GetComponentInParent<EnemyAI>();
             if (currSpell == 3)
             {
+                //AudioManager.instance.Play("ShieldedSFX");
                 _enemy.isProtected = true;
             }
 
@@ -92,8 +93,12 @@ public class Boolet : MonoBehaviour
                 _enemy.enemyIsHit = true;
             }
 
+            else if (healthMultiplier > 0)
+            {
+                AudioManager.instance.Play("HealedSFX");
+            }
+
             _enemy.hp = _enemy.hp + (healthMultiplier * bulletAmt);
-            _enemy.healthBar.UpdateHealthBar(_enemy.hp, _enemy.maxhp);
             Debug.Log("Enemy Helf: " + _enemy.hp);
 
             if (VFX != null)
@@ -111,6 +116,7 @@ public class Boolet : MonoBehaviour
 
             if (currSpell == 3)
             {
+                //AudioManager.instance.Play("ShieldedSFX");
                 _king.kingProtected = true;
             }
 
@@ -122,6 +128,11 @@ public class Boolet : MonoBehaviour
             if (healthMultiplier < 0)
             {
                 _king.kingIsHit = true;
+            }
+
+            else if (healthMultiplier > 0)
+            {
+                AudioManager.instance.Play("HealedSFX");
             }
 
             _king.hp = _king.hp + (healthMultiplier * bulletAmt);
