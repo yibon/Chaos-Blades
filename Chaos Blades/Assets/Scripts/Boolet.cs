@@ -90,10 +90,10 @@ public class Boolet : MonoBehaviour
             if (healthMultiplier < 0)
             {
                 _enemy.enemyIsHit = true;
-                
             }
 
             _enemy.hp = _enemy.hp + (healthMultiplier * bulletAmt);
+            _enemy.healthBar.UpdateHealthBar(_enemy.hp, _enemy.maxhp);
             Debug.Log("Enemy Helf: " + _enemy.hp);
 
             if (VFX != null)

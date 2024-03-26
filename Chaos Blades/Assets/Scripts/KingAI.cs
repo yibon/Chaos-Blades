@@ -91,6 +91,7 @@ public class KingAI : MonoBehaviour
             {
                 collision.gameObject.GetComponent<EnemyAI>().hp -= attack;
                 collision.gameObject.GetComponent<EnemyAI>().enemyIsHit = true;
+                collision.gameObject.GetComponent<EnemyAI>().healthBar.UpdateHealthBar(collision.gameObject.GetComponent<EnemyAI>().hp, collision.gameObject.GetComponent<EnemyAI>().maxhp);
                 //Debug.Log("ouch");
             }
         }

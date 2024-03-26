@@ -7,6 +7,7 @@ public class EnemyAI : MonoBehaviour
 {
     [SerializeField] string name;
     [SerializeField] public float hp;
+    [SerializeField] public float maxhp;
     [SerializeField] float speed;
     [SerializeField] public float attack;
     [SerializeField] float attackSpeed;
@@ -35,7 +36,9 @@ public class EnemyAI : MonoBehaviour
     public GameObject[] nonSupportEnemies;
     public GameObject supportEnemyVFX;
     
-    
+    //health bar
+    public EnemyHealthBar healthBar;
+
     public bool isProtected;
     float protectionTimer;
 
@@ -64,7 +67,7 @@ public class EnemyAI : MonoBehaviour
         if (enemyIsHit == true)
         {
             StartCoroutine("HitFlash", this.gameObject);
-            enemyIsHit= false;
+            enemyIsHit = false;
         }
 
         //destory if 0 hp

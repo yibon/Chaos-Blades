@@ -36,6 +36,7 @@ public class PlayerMovement : MonoBehaviour
     public int protectionSpellIndex = 0;
 
     float spellChargeTimer = 0;
+    float maxspellchargetimer = 3;
     public Image barImage;
 
     Shooting _shooting;
@@ -140,7 +141,7 @@ public class PlayerMovement : MonoBehaviour
             if (Input.GetMouseButton(1)) //healing with RMB
             {
                 spellChargeTimer += Time.deltaTime;
-                barImage.fillAmount = spellChargeTimer / 3;
+                SpellChargeBar.Instance.UpdateChargeBar(spellChargeTimer, maxspellchargetimer);
 
                 castingProtecc = true;
                 Debug.Log("protecc Holding");
@@ -199,6 +200,8 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log("No Mana!");
             }
         }
+
+        SpellChargeBar.Instance.UpdateChargeBar(spellChargeTimer, maxspellchargetimer);
     }
 
     public void ChargeAttaccSpell(int attackIndex)
@@ -211,6 +214,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 spellChargeTimer += Time.deltaTime;
                 castingAttack = true;
+                SpellChargeBar.Instance.UpdateChargeBar(spellChargeTimer, maxspellchargetimer);
                 Debug.Log("Attack Holding");
             }
             else if (Input.GetMouseButtonUp(0))
@@ -274,5 +278,7 @@ public class PlayerMovement : MonoBehaviour
                 Debug.Log("No Mana!");
             }
         }
+
+        SpellChargeBar.Instance.UpdateChargeBar(spellChargeTimer, maxspellchargetimer);
     }
 }
