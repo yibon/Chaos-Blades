@@ -100,6 +100,7 @@ public class KingAI : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag ("Enemy Support"))
         {
+            AudioManager.instance.Play("KingSwing");
             if (!collision.gameObject.GetComponent<EnemyAI>().isProtected)
             {
                 collision.gameObject.GetComponent<EnemyAI>().hp -= attack;
