@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
+    private Camera mainCam;
+    Vector3 mousePos;
+
     float horizontalIP;
     float verticalIP;
 
@@ -41,6 +44,9 @@ public class PlayerMovement : MonoBehaviour
 
     Shooting _shooting;
 
+    SpriteRenderer _sr;
+    public static bool playerFlipped;
+
     //[Header("SHOOTING")] 
     //// Singleton this? 
     //public Transform firePoint;
@@ -56,6 +62,9 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         _shooting = gameObject.GetComponentInChildren<Shooting>();
+        _sr = GetComponent<SpriteRenderer>();
+
+        mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
 
     // Update is called once per frame
@@ -66,8 +75,21 @@ public class PlayerMovement : MonoBehaviour
 
         direction = new Vector2(horizontalIP, verticalIP);
 
-        animator.SetFloat("Speed", direction.magnitude); 
-        
+        animator.SetFloat("Speed", direction.magnitude);
+
+
+        mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
+        if (mousePos.x < transform.position.x)
+        {
+            _sr.flipX = true;
+            playerFlipped = true;
+        }
+
+        else
+        {
+            _sr.flipX = false;
+            playerFlipped = false;
+        }
 
         #region choosing spell
         if (Input.GetKeyDown(KeyCode.Q)) //attack

@@ -14,12 +14,15 @@ public class Shooting : MonoBehaviour
     public GameObject[] attBulletPF;
     public GameObject[] defBulletPF;
 
+    SpriteRenderer bullet_sr;
+
     //public static int attOrDef;
     //public static int spellIndex;
     // Start is called before the first frame update
     void Start()
     {
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
+        bullet_sr = bulletTransform.gameObject.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -34,6 +37,16 @@ public class Shooting : MonoBehaviour
         float rotZ = Mathf.Atan2(rotation.y, rotation.x) * Mathf.Rad2Deg;
 
         transform.rotation = Quaternion.Euler(0, 0, rotZ);
+
+        if (PlayerMovement.playerFlipped)
+        {
+            bullet_sr.flipY = true;
+        }
+
+        else
+        {
+            bullet_sr.flipY = false;
+        }
     }
 
     //SHOOTING
