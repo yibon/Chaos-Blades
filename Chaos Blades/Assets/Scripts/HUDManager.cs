@@ -30,28 +30,28 @@ public class HUDManager : MonoBehaviour
         attackCD_text.text = "Attack CD: " + _player.attackSpellCooldownList[_player.attackSpellIndex].ToString("#.00");
         defCD_text.text = "Defence CD: " + _player.proteccSpellCooldownList[_player.protectionSpellIndex].ToString("#.00");
 
-        //switch (_player.attackSpellIndex)
-        //{
-        //    case 0:
-        //        attaccCard.sprite = pewPewCard;
-        //        break;
+        switch (_player.attackSpellIndex)
+        {
+            case 0:
+                attaccCard.sprite = pewPewCard;
+                break;
 
-        //    case 1:
-        //        attaccCard.sprite = boomBoomCard;
-        //        break;
-        //}
+            case 1:
+                attaccCard.sprite = boomBoomCard;
+                break;
+        }
 
 
-        //switch (_player.protectionSpellIndex)
-        //{
-        //    case 0:
-        //        defenceCard.sprite = helfCard;
-        //        break;
+        switch (_player.protectionSpellIndex)
+        {
+            case 0:
+                defenceCard.sprite = helfCard;
+                break;
 
-        //    case 1:
-        //        defenceCard.sprite = proteccCard;
-        //        break;
-        //}
+            case 1:
+                defenceCard.sprite = proteccCard;
+                break;
+        }
 
     }
 }

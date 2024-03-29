@@ -1,6 +1,7 @@
 
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class KingAI : MonoBehaviour
 {
@@ -21,6 +22,9 @@ public class KingAI : MonoBehaviour
     float protectionTimer;
     AudioManager _am;
 
+    private bool halfPlayedOnce;
+    private bool quarterPlayedOnce;
+
     // Update is called once per frame
     void Update()
     {
@@ -28,16 +32,17 @@ public class KingAI : MonoBehaviour
 
         #region PLAYING SOUNDS
 
-        //if (hp < 50)
-        //{
-        //    Debug.Log("ofawmofmwofmew");
-        //    AudioManager.instance.Play("King50Health");
-        //}
+        if (hp < 50 && !halfPlayedOnce)
+        {
+            AudioManager.instance.Play("King50Health");
+            halfPlayedOnce = true;
+        }
 
-        //if (hp < 25)
-        //{
-        //    AudioManager.instance.Play("King10Health");
-        //}
+        if (hp < 25 && !quarterPlayedOnce)
+        {
+            AudioManager.instance.Play("King10Health");
+            quarterPlayedOnce = true;
+        }
 
 
         #endregion
@@ -88,9 +93,10 @@ public class KingAI : MonoBehaviour
 
         if (hp <= 0)
         {
-            
+
             // put in the game over screen here
             // can start the calculations for score now
+            SceneLoader.Load(SceneLoader.Scenes.GameOver);
             ScoreManager.instance.GameOver();
             Destroy(this.gameObject);
         }

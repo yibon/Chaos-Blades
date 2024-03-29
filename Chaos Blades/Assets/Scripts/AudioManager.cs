@@ -1,12 +1,45 @@
 using UnityEngine.Audio;
 using UnityEngine;
 using System;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
     public Sound[] sounds;
 
     public static AudioManager instance;
+
+    private Scene currScene;
+
+    void OnEnable()
+    {
+        SceneManager.sceneLoaded += OnSceneLoaded;
+    }
+
+    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    {
+        currScene = SceneManager.GetActiveScene();
+
+        if (currScene.name == "MainMenu")
+        {
+            Play("MenuBGM");
+        }
+
+        else if (currScene.name == "SampleScene")
+        {
+            Stop("MenuBGM");
+            Play("GameBGM");
+            Play("DefendAnnoucnement");
+        }
+
+
+        else if (currScene.name == "GameOver")
+        {
+            Play("GameOverAnnouncement");
+        }
+
+        //Destroy(gameObject);
+    }
 
     private void Awake()
     {
@@ -36,8 +69,6 @@ public class AudioManager : MonoBehaviour
 
     void Start()
     {
-        Play("GameBGM");
-        Play("DefendAnnoucnement");
     }
 
     public void Play(string name)
@@ -49,5 +80,16 @@ public class AudioManager : MonoBehaviour
             return;
         }
         s.source.Play();
+    }
+
+    public void Stop(string name)
+    {
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if (s == null)
+        {
+            Debug.LogWarning("Sound " + name + " not found!");
+            return;
+        }
+        s.source.Stop();
     }
 }
