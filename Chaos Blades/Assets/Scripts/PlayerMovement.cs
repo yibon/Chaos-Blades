@@ -175,7 +175,7 @@ public class PlayerMovement : MonoBehaviour
                 #endregion
 
                 spellChargeTimer += Time.deltaTime;
-                SpellChargeBar.Instance.UpdateChargeBar(spellChargeTimer, maxspellchargetimer);
+                SpellChargeBar.Instance.UpdateProtectChargeBar(spellChargeTimer, maxspellchargetimer);
 
                 castingProtecc = true;
                 Debug.Log("protecc Holding");
@@ -235,7 +235,7 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        SpellChargeBar.Instance.UpdateChargeBar(spellChargeTimer, maxspellchargetimer);
+        SpellChargeBar.Instance.UpdateProtectChargeBar(spellChargeTimer, maxspellchargetimer);
     }
 
     public void ChargeAttaccSpell(int attackIndex)
@@ -248,7 +248,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 spellChargeTimer += Time.deltaTime;
                 castingAttack = true;
-                SpellChargeBar.Instance.UpdateChargeBar(spellChargeTimer, maxspellchargetimer);
+                SpellChargeBar.Instance.UpdateAttackChargeBar(spellChargeTimer, maxspellchargetimer);
                 Debug.Log("Attack Holding");
             }
             else if (Input.GetMouseButtonUp(0))
@@ -325,6 +325,6 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        SpellChargeBar.Instance.UpdateChargeBar(spellChargeTimer, maxspellchargetimer);
+        SpellChargeBar.Instance.UpdateAttackChargeBar(spellChargeTimer, maxspellchargetimer);
     }
 }

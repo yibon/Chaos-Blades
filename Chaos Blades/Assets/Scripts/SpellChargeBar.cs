@@ -6,7 +6,9 @@ using UnityEngine.UI;
 
 public class SpellChargeBar : MonoBehaviour
 {
-    [SerializeField] public Slider ChargeBar;
+    [SerializeField] public Slider AttackChargeBar;
+    [SerializeField] public Slider ProtectChargeBar;
+
 
     #region Singleton Code
     public static SpellChargeBar Instance { get; private set; }
@@ -27,9 +29,14 @@ public class SpellChargeBar : MonoBehaviour
     }
     #endregion
 
-    public void UpdateChargeBar(float currCharge, float maxCharge)
+    public void UpdateAttackChargeBar(float currCharge, float maxCharge)
     {
-        ChargeBar.value = currCharge / maxCharge;
+        AttackChargeBar.value = currCharge / maxCharge;
+    }
+    
+    public void UpdateProtectChargeBar(float currCharge, float maxCharge)
+    {
+        ProtectChargeBar.value = currCharge / maxCharge;
     }
 
 }
