@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class HUDManager : MonoBehaviour
 {
-    [SerializeField] TMP_Text kinghp_text;
-    [SerializeField] TMP_Text playerMana_text;
 
     [SerializeField] TMP_Text attackCD_text;
     [SerializeField] TMP_Text defCD_text;
@@ -24,9 +22,6 @@ public class HUDManager : MonoBehaviour
 
     void Update()
     {
-        kinghp_text.text = "King's HP: " + _king.hp;
-        playerMana_text.text = "Player's Mana: " + Mathf.FloorToInt(_player.currMana);
-
         attackCD_text.text = "Attack CD: " + _player.attackSpellCooldownList[_player.attackSpellIndex].ToString("#.00");
         defCD_text.text = "Defence CD: " + _player.proteccSpellCooldownList[_player.protectionSpellIndex].ToString("#.00");
 

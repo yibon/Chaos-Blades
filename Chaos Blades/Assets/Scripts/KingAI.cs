@@ -2,6 +2,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class KingAI : MonoBehaviour
 {
@@ -10,6 +11,9 @@ public class KingAI : MonoBehaviour
     [SerializeField] public float attack;
     [SerializeField] float attackSpeed;
     [SerializeField] float range;
+
+    float maxHP = 100;
+    [SerializeField] public Slider HPSlider;
 
     [HideInInspector]public bool kingIsHit = false;
 
@@ -29,6 +33,7 @@ public class KingAI : MonoBehaviour
     void Update()
     {
         hp = Mathf.Clamp(hp, 0, 100);
+        HPSlider.value = hp / maxHP;
 
         // KING HEALTH CHEATCODE
         //if (Input.GetKeyDown(KeyCode.O)) {
@@ -87,6 +92,7 @@ public class KingAI : MonoBehaviour
         if (GameObject.FindGameObjectWithTag("Enemy") == true)
         {
             Vector3 forceApplied = GameObject.FindGameObjectWithTag("Enemy").transform.position - this.transform.position;
+            forceApplied = forceApplied.normalized;
             forceApplied = forceApplied * 1f;
             rb2D.AddForce(forceApplied);
         }

@@ -13,6 +13,7 @@ public class PlayerMovement : MonoBehaviour
 
     //Player Stats
     public float currMana = 100;
+    float maxMana = 100;
     float manaRegenRate = 0.5f;
     public List<float> attackSpellCooldownList = new List<float>();
     public List<float> proteccSpellCooldownList = new List<float>();
@@ -22,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     float proteccSpell2CD = 0;
     bool castingAttack = false;
     bool castingProtecc = false;
+
+    [SerializeField] public Slider ManaSlider;
 
     public Animator animator;
 
@@ -70,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ManaSlider.value = currMana / maxMana;
         horizontalIP = Input.GetAxisRaw("Horizontal");
         verticalIP = Input.GetAxisRaw("Vertical");
 
