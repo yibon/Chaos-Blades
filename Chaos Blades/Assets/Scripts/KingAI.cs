@@ -22,7 +22,7 @@ public class KingAI : MonoBehaviour
     float protectionTimer;
     AudioManager _am;
 
-    private bool halfPlayedOnce;
+    //private bool halfPlayedOnce;
     private bool quarterPlayedOnce;
 
     // Update is called once per frame
@@ -30,13 +30,25 @@ public class KingAI : MonoBehaviour
     {
         hp = Mathf.Clamp(hp, 0, 100);
 
+        // KING HEALTH CHEATCODE
+        //if (Input.GetKeyDown(KeyCode.O)) {
+        //    hp += 10;
+        //}
+
         #region PLAYING SOUNDS
 
-        if (hp < 50 && !halfPlayedOnce)
+        //if (hp < 50 && !halfPlayedOnce)
+        //{
+        //    AudioManager.instance.Play("King50Health");
+        //    halfPlayedOnce = true;
+        //}
+
+        // If king is healed > 25%
+        if (hp > 25)
         {
-            AudioManager.instance.Play("King50Health");
-            halfPlayedOnce = true;
-        }
+            quarterPlayedOnce = false;
+        }    
+
 
         if (hp < 25 && !quarterPlayedOnce)
         {
@@ -106,9 +118,31 @@ public class KingAI : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Enemy") || collision.gameObject.CompareTag ("Enemy Support"))
         {
-            AudioManager.instance.Play("KingSwing");
+            //AudioManager.instance.Play("KingSwing");
             if (!collision.gameObject.GetComponent<EnemyAI>().isProtected)
             {
+                #region PLAY SOUNDS
+
+                if (collision.transform.root.name == "EnemyMelee(Clone)")
+                {
+                    AudioManager.instance.Play("SlimeHurt");
+                }
+                if (collision.transform.root.name == "EnemyRanged(Clone)")
+                {
+                    AudioManager.instance.Play("WispHurt");
+                }
+
+                if (collision.transform.root.name == "EnemySupport(Clone)")
+                {
+                    AudioManager.instance.Play("ShamanHurt");
+                }
+
+                if (collision.transform.root.name == "EnemyTank(Clone)")
+                {
+                    AudioManager.instance.Play("GolemHurt");
+                }
+                #endregion
+
                 collision.gameObject.GetComponent<EnemyAI>().hp -= attack;
                 collision.gameObject.GetComponent<EnemyAI>().enemyIsHit = true;
                 collision.gameObject.GetComponent<EnemyAI>().healthBar.UpdateHealthBar(collision.gameObject.GetComponent<EnemyAI>().hp, collision.gameObject.GetComponent<EnemyAI>().maxhp);

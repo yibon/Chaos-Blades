@@ -153,19 +153,8 @@ public class EnemyAI : MonoBehaviour
     void RangeAttack()
     {
         #region PLAY SOUNDS
-        int randomSound = Random.Range(0, 3);
-        switch (randomSound)
-        {
-            case 0:
-                AudioManager.instance.Play("Wisp1");
-                break;
-            case 1:
-                AudioManager.instance.Play("Wisp2");
-                break;
-            case 2:
-                AudioManager.instance.Play("Wisp3");
-                break;
-        }
+
+        AudioManager.instance.Play("WispAttack");
         
         #endregion
 
@@ -185,43 +174,14 @@ public class EnemyAI : MonoBehaviour
             #region PLAY SOUNDS
             if (gameObject.name == "EnemyMelee(Clone)")
             {
-                int randomSound = Random.Range(0, 3);
-                switch (randomSound)
-                {
-                    case 0:
-                        AudioManager.instance.Play("Slime1");
-                        break;
-                    case 1:
-                        AudioManager.instance.Play("Slime2");
-                        break;
-                    case 2:
-                        AudioManager.instance.Play("Slime3");
-                        break;
-                }
+                AudioManager.instance.Play("SlimeAttack");
 
             }
 
             else if (gameObject.name == "EnemyTank(Clone)")
             {
-                int randomSound = Random.Range(0, 5);
-                switch (randomSound)
-                {
-                    case 0:
-                        AudioManager.instance.Play("Golem1");
-                        break;
-                    case 1:
-                        AudioManager.instance.Play("Golem2");
-                        break;
-                    case 2:
-                        AudioManager.instance.Play("Golem3");
-                        break;
-                    case 3:
-                        AudioManager.instance.Play("Golem4");
-                        break;
-                    case 4:
-                        AudioManager.instance.Play("Golem5");
-                        break;
-                }
+
+                AudioManager.instance.Play("GolemAttack");
             }
             #endregion
 
@@ -233,22 +193,8 @@ public class EnemyAI : MonoBehaviour
     void SupportBuff() //special class used for support enemy
     {
         #region PLAY SOUNDS
-        int randomSound = Random.Range(0, 4);
-        switch (randomSound)
-        {
-            case 0:
-                AudioManager.instance.Play("Shaman1");
-                break;
-            case 1:
-                AudioManager.instance.Play("Shaman2");
-                break;
-            case 2:
-                AudioManager.instance.Play("Shaman3");
-                break;
-            case 3:
-                AudioManager.instance.Play("Shaman4");
-                break;
-        }
+
+        AudioManager.instance.Play("ShamanAttack");
 
         #endregion
         animator.Play("Shaman_Cast");

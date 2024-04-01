@@ -78,6 +78,12 @@ public class PlayerMovement : MonoBehaviour
         animator.SetFloat("Speed", direction.magnitude);
 
 
+        // MANA REGEN
+        //if (Input.GetKeyUp(KeyCode.P))
+        //{
+        //    currMana += 10;
+        //}
+
         mousePos = mainCam.ScreenToWorldPoint(Input.mousePosition);
         if (mousePos.x < transform.position.x)
         {
@@ -162,6 +168,14 @@ public class PlayerMovement : MonoBehaviour
             #region Checking Mouse press
             if (Input.GetMouseButton(1)) //healing with RMB
             {
+                spellChargeTimer += Time.deltaTime;
+                SpellChargeBar.Instance.UpdateProtectChargeBar(spellChargeTimer, maxspellchargetimer);
+
+                castingProtecc = true;
+                Debug.Log("protecc Holding");
+            }
+            else if (Input.GetMouseButtonUp(1))
+            {
                 #region Playing Sounds
                 if (proteccIndex == 0)
                 {
@@ -174,14 +188,6 @@ public class PlayerMovement : MonoBehaviour
                 }
                 #endregion
 
-                spellChargeTimer += Time.deltaTime;
-                SpellChargeBar.Instance.UpdateProtectChargeBar(spellChargeTimer, maxspellchargetimer);
-
-                castingProtecc = true;
-                Debug.Log("protecc Holding");
-            }
-            else if (Input.GetMouseButtonUp(1))
-            {
                 Shooting.canProtect = true;
                 //setting CD
                 proteccSpellCooldownList[proteccIndex] = SpellManager.instance.proteccSpells[proteccIndex].cooldown;

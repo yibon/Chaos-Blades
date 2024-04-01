@@ -86,6 +86,7 @@ public class EnemyWaves : MonoBehaviour
         // When wave timer goes off,
         if (waveTimer > WavesList[currWaveIndex].waveSpawnInterval)
         {
+            AudioManager.instance.Play("NewWave");
             // current wave index increases
             ++currWaveIndex;
             Debug.Log("Wave Timer ran out: " + waveTimer + " || Current Wave is: " + currWaveIndex);

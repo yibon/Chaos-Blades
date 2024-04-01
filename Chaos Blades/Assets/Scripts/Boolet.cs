@@ -77,6 +77,30 @@ public class Boolet : MonoBehaviour
         if (collision.transform.root.CompareTag("Enemy") || collision.transform.root.CompareTag("Enemy Support"))
         {
             EnemyAI _enemy = collision.gameObject.GetComponentInParent<EnemyAI>();
+
+            #region PLAY SOUNDS
+
+            if (collision.transform.root.name == "EnemyMelee(Clone)")
+            {
+                AudioManager.instance.Play("SlimeHurt");
+            }
+            if (collision.transform.root.name == "EnemyRanged(Clone)")
+            {
+                AudioManager.instance.Play("WispHurt");
+            }
+
+            if (collision.transform.root.name == "EnemySupport(Clone)")
+            {
+                AudioManager.instance.Play("ShamanHurt");
+            }
+
+            if (collision.transform.root.name == "EnemyTank(Clone)")
+            {
+                AudioManager.instance.Play("GolemHurt");
+            }
+
+            #endregion
+
             if (currSpell == 3)
             {
                 //AudioManager.instance.Play("ShieldedSFX");

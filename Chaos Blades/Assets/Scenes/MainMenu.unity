@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 532728237}
   - component: {fileID: 532728236}
   - component: {fileID: 532728235}
+  - component: {fileID: 532728238}
   m_Layer: 5
   m_Name: Exit
   m_TagString: Untagged
@@ -256,6 +257,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 532728233}
   m_CullTransparentMesh: 1
+--- !u!114 &532728238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532728233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e64036e19af0ff44a9fdc8589ebf249, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &688561024
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,6 +398,7 @@ GameObject:
   - component: {fileID: 1194509909}
   - component: {fileID: 1194509908}
   - component: {fileID: 1194509907}
+  - component: {fileID: 1194509910}
   m_Layer: 5
   m_Name: StartButton
   m_TagString: Untagged
@@ -506,6 +520,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194509905}
   m_CullTransparentMesh: 1
+--- !u!114 &1194509910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194509905}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e64036e19af0ff44a9fdc8589ebf249, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1231541131
 GameObject:
   m_ObjectHideFlags: 0
@@ -543,49 +569,43 @@ MonoBehaviour:
     loop: 1
     source: {fileID: 0}
   - name: DefendAnnoucnement
-    clip: {fileID: 8300000, guid: b63a86dacea7661468966ec0f4616f25, type: 3}
+    clip: {fileID: 8300000, guid: 490c330b9da45db4b8330377053b3046, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: KingHit
-    clip: {fileID: 8300000, guid: 341958e823e80a74e81313a888f622dc, type: 3}
+    clip: {fileID: 8300000, guid: 93643899fbf39ff4a99d1a8fa092d738, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: King10Health
-    clip: {fileID: 8300000, guid: 39edaa2d48c4f5f4aa5ddf836db5c8c5, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: King50Health
-    clip: {fileID: 8300000, guid: cefa257b1cf9cb7408d99f46f503662f, type: 3}
+    clip: {fileID: 8300000, guid: 1a54644b7349b71458aa28f836db8ab3, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: PewPewSFX
-    clip: {fileID: 8300000, guid: 47dc1c64ddee6384db27442e16d196f9, type: 3}
+    clip: {fileID: 8300000, guid: d9ca3e87bb4bc684ebdd5bedbc5c4670, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: BoomBoomSFX
-    clip: {fileID: 8300000, guid: b906853d78cc7ef4b912d6674f371eef, type: 3}
+    clip: {fileID: 8300000, guid: 34ffaaf9dd56cd249b00b5b398910f8f, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: HelfSFX
-    clip: {fileID: 8300000, guid: 01642771f4d1ac9489e58f118899f271, type: 3}
+    clip: {fileID: 8300000, guid: 9a5b7bf7004d4734faeef4f0e0754764, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: ShieldSFX
-    clip: {fileID: 8300000, guid: c8f1b5d798229d04cbac2cb14572ce16, type: 3}
+    clip: {fileID: 8300000, guid: 35ec302af7f56964ea09a0d90038f198, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -596,98 +616,50 @@ MonoBehaviour:
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Wisp1
-    clip: {fileID: 8300000, guid: 2bba6134ce240b14c872e1480e64b8a0, type: 3}
+  - name: WispHurt
+    clip: {fileID: 8300000, guid: 96df77173c49a2040b138a9cd377e0f9, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Wisp2
-    clip: {fileID: 8300000, guid: 369750840c92d9b4d9f61969b408d776, type: 3}
+  - name: WispAttack
+    clip: {fileID: 8300000, guid: b3f8b2b1abf78f4498a77834e45e5a53, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Wisp3
-    clip: {fileID: 8300000, guid: e69d208c420c3c14ea0ccf80b7c21aea, type: 3}
+  - name: ShamanHurt
+    clip: {fileID: 8300000, guid: 1772dd9a6454276439e497de57ba332c, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Shaman1
-    clip: {fileID: 8300000, guid: 493ec42200ae7b644831000b4f770f19, type: 3}
+  - name: ShamanAttack
+    clip: {fileID: 8300000, guid: 6eaf22e025dc17d428965f5386ab9007, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Shaman2
-    clip: {fileID: 8300000, guid: 158fe2ef803457d468e7f09f5b28ee39, type: 3}
+  - name: GolemHurt
+    clip: {fileID: 8300000, guid: 9de32a5db47d079439cb7d8152970824, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Shaman3
-    clip: {fileID: 8300000, guid: a02b47c613b91dd418111ef3970281e0, type: 3}
+  - name: GolemAttack
+    clip: {fileID: 8300000, guid: 5d008446d98a13347a878c119cbd39ce, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Shaman4
-    clip: {fileID: 8300000, guid: 2185e7d223553ab4391ad2ef5b2e6139, type: 3}
+  - name: SlimeHurt
+    clip: {fileID: 8300000, guid: 98e7fb0b277ede8459731e8ce4d1012b, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
-  - name: Golem1
-    clip: {fileID: 8300000, guid: 8f58975351c4b5e439f5cd64e733c861, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Golem2
-    clip: {fileID: 8300000, guid: e471ad87c17b3df4fbf59fe3f43340c7, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Golem3
-    clip: {fileID: 8300000, guid: 273bb0de2365b6242941aa6225d67884, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Golem4
-    clip: {fileID: 8300000, guid: 75c894d54a11e0a46a8b6dbec6911ee6, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Golem5
-    clip: {fileID: 8300000, guid: c735a4f9cfcba55428a6cc0f71d3dc9c, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Slime1
-    clip: {fileID: 8300000, guid: a3afa05f3f883d84399e21a7d4a32276, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Slime2
-    clip: {fileID: 8300000, guid: f5e030e2a0d61184fadc6fe0e136b269, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: Slime3
-    clip: {fileID: 8300000, guid: 75542443d20559244aa417418197a6f0, type: 3}
-    volume: 1
-    pitch: 1
-    loop: 0
-    source: {fileID: 0}
-  - name: KingSwing
-    clip: {fileID: 8300000, guid: 60961b475cfbd494fbe8316ccc1e721a, type: 3}
+  - name: SlimeAttack
+    clip: {fileID: 8300000, guid: f2a04b9450ee4b74abd7910ac236dea6, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -700,6 +672,36 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: GameOverAnnouncement
     clip: {fileID: 8300000, guid: 1800f95cad744da41ac9d93683fb7e76, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ButtonHover
+    clip: {fileID: 8300000, guid: a502fbad563051341b4a648ae3103040, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: ButtonClick
+    clip: {fileID: 8300000, guid: 4974e17d4ac91ba4db05e893877b0ffc, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: RestartClick
+    clip: {fileID: 8300000, guid: e1959f7ca60f3ce4da9f6d2cc141110f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: NewWave
+    clip: {fileID: 8300000, guid: 6a878004ea914bd4c8ba536d2abe78ed, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: StartButton
+    clip: {fileID: 8300000, guid: 912838990d6e0c240a42bbfc9e5725be, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -847,6 +849,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1339197346}
   - component: {fileID: 1339197349}
+  - component: {fileID: 1339197350}
   - component: {fileID: 1339197348}
   - component: {fileID: 1339197347}
   m_Layer: 5
@@ -958,6 +961,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1339197345}
   m_CullTransparentMesh: 1
+--- !u!114 &1339197350
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1339197345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e64036e19af0ff44a9fdc8589ebf249, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1761047303
 GameObject:
   m_ObjectHideFlags: 0
