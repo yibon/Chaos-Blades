@@ -108,8 +108,7 @@ public class KingAI : MonoBehaviour
 
             // put in the game over screen here
             // can start the calculations for score now
-            SceneLoader.Load(SceneLoader.Scenes.GameOver);
-            ScoreManager.instance.GameOver();
+            SceneManager.LoadScene(2);
             Destroy(this.gameObject);
         }
     }
