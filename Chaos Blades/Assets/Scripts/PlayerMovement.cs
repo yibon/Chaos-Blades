@@ -28,9 +28,7 @@ public class PlayerMovement : MonoBehaviour
 
     public Animator animator;
 
-    float moveSpeed = 5f;
-
-    public float playerSpeed;
+    public float moveSpeed;
 
     Vector2 direction;
 

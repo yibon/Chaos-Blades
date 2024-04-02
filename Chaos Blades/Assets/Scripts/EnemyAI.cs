@@ -146,7 +146,7 @@ public class EnemyAI : MonoBehaviour
     {
         Vector3 forceApplied = go.transform.position - this.transform.position;
         forceApplied = forceApplied.normalized;
-        forceApplied = forceApplied * 1f;
+        forceApplied = forceApplied * speed;
         rb2D.AddForce(forceApplied);
     }
 

@@ -231,7 +231,7 @@ MonoBehaviour:
   name: Melee
   hp: 4
   maxhp: 4
-  speed: 8
+  speed: 3
   attack: 2
   attackSpeed: 0.5
   range: 2

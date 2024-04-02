@@ -549,7 +549,7 @@ MonoBehaviour:
   name: Ranged
   hp: 2
   maxhp: 2
-  speed: 6
+  speed: 3
   attack: 3
   attackSpeed: 1.2
   range: 8
