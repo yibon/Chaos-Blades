@@ -3,11 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ScoreManager : MonoBehaviour
-{
-    //this object only exist while the game is running and when we show the statics screen (game over screen),
-    //once the game ends and players restart the level, this object should be deleted and the new object should take charge,
-    //and hence the scores are reseted. 
-
+{ 
     //if want to give players more stats, i.e. how many different type of enemies killed and what different spells used,
     //can store all in an array and hope it works
 
