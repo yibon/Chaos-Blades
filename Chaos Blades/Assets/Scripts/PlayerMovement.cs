@@ -67,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
 
         mainCam = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<Camera>();
     }
-
+        
     // Update is called once per frame
     void Update()
     {

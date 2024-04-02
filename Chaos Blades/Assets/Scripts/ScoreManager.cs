@@ -28,6 +28,11 @@ public class ScoreManager : MonoBehaviour
         StartGame();
     }
 
+    private void Update()
+    {
+        timeSurvived += Time.deltaTime;
+    }
+
     //code is called when the game starts
     public void StartGame()
     {
@@ -46,7 +51,7 @@ public class ScoreManager : MonoBehaviour
     {
         //Time.time returns the time at current frame in seconds,
         //so need to modify it accordingly
-        timeSurvived = Time.time;
+        //timeSurvived = Time.deltaTime;
 
         Debug.Log("Total Score: " + currentScore + "\nTime Taken: " + timeSurvived);
     }
