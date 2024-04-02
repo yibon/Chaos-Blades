@@ -93,7 +93,7 @@ public class KingAI : MonoBehaviour
         {
             Vector3 forceApplied = GameObject.FindGameObjectWithTag("Enemy").transform.position - this.transform.position;
             forceApplied = forceApplied.normalized;
-            forceApplied = forceApplied * 1f;
+            forceApplied = forceApplied * speed;
             rb2D.AddForce(forceApplied);
         }
         else if (GameObject.FindGameObjectWithTag("Enemy Support") == true)
@@ -101,7 +101,7 @@ public class KingAI : MonoBehaviour
             GameObject enemySupport = GameObject.FindWithTag("Enemy Support");
             Vector3 forceApplied = enemySupport.transform.position - this.transform.position;
             forceApplied = forceApplied.normalized;
-            forceApplied = forceApplied * 1f;
+            forceApplied = forceApplied * speed;
             rb2D.AddForce(forceApplied);
         }
         else
