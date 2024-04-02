@@ -599,7 +599,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: HelfSFX
-    clip: {fileID: 8300000, guid: 9a5b7bf7004d4734faeef4f0e0754764, type: 3}
+    clip: {fileID: 8300000, guid: da8d956cac1cae344942400322056ef5, type: 3}
     volume: 1
     pitch: 1
     loop: 0
@@ -677,13 +677,13 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: ButtonHover
-    clip: {fileID: 8300000, guid: a502fbad563051341b4a648ae3103040, type: 3}
+    clip: {fileID: 8300000, guid: 2db9faab155d3ff4e91ebb8f0d3b026b, type: 3}
     volume: 1
     pitch: 1
     loop: 0
     source: {fileID: 0}
   - name: ButtonClick
-    clip: {fileID: 8300000, guid: 4974e17d4ac91ba4db05e893877b0ffc, type: 3}
+    clip: {fileID: 8300000, guid: ef8ad3a2e791d794f816457f4f8749f5, type: 3}
     volume: 1
     pitch: 1
     loop: 0
