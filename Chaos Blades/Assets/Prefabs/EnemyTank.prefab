@@ -260,7 +260,7 @@ MonoBehaviour:
   name: Tank
   hp: 9
   maxhp: 9
-  speed: 2
+  speed: 5
   attack: 5
   attackSpeed: 0.6
   range: 2

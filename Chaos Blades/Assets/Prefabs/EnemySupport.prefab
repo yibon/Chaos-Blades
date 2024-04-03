@@ -530,7 +530,7 @@ MonoBehaviour:
   name: Support
   hp: 3
   maxhp: 3
-  speed: 2.5
+  speed: 4.5
   attack: 0
   attackSpeed: 1.4
   range: 5
