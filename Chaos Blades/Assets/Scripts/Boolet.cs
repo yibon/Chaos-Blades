@@ -124,11 +124,22 @@ public class Boolet : MonoBehaviour
 
             _enemy.hp = _enemy.hp + (healthMultiplier * bulletAmt);
             Debug.Log("Enemy Helf: " + _enemy.hp);
-
-            if (VFX != null)
+            if (currSpell == 1)
             {
-                GameObject vfx = Instantiate(VFX, collision.transform.position, collision.transform.rotation);
-                Destroy(vfx, 1f);
+                if (VFX != null)
+                {
+                    GameObject vfx = Instantiate(VFX, collision.transform.position, collision.transform.rotation);
+                    Destroy(vfx, 1.5f);
+                }
+            }
+            else
+            {
+                if (VFX != null)
+                {
+                    GameObject vfx = Instantiate(VFX, collision.transform.position, collision.transform.rotation);
+                    Destroy(vfx, 0.5f);
+                }
+
             }
             Destroy(this.gameObject);
             
@@ -162,10 +173,22 @@ public class Boolet : MonoBehaviour
             _king.hp = _king.hp + (healthMultiplier * bulletAmt);
 
             Debug.Log("King Helf: " + _king.hp);
-            if (VFX != null)
+            if (currSpell == 1)
             {
-                GameObject vfx = Instantiate(VFX, collision.transform.position, collision.transform.rotation);
-                Destroy(vfx, 0.5f);
+                if (VFX != null)
+                {
+                    GameObject vfx = Instantiate(VFX, collision.transform.position, collision.transform.rotation);
+                    Destroy(vfx, 1.5f);
+                }
+            }
+            else
+            {
+                if (VFX != null)
+                {
+                    GameObject vfx = Instantiate(VFX, collision.transform.position, collision.transform.rotation);
+                    Destroy(vfx, 0.5f);
+                }
+
             }
             Destroy(this.gameObject);
         }
